@@ -6,4 +6,5 @@ export default defineConfig({
   css: {
     postcss: "./postcss.config.js", // Ensure this points to your PostCSS config
   },
+  base: '/scoil-bhreac-chluain-website/',
 });
