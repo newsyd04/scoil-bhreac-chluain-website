@@ -140,12 +140,11 @@ const HomePage = () => {
             child's growth and education. Get in touch or visit us to learn
             more.
           </p>
-          <a
-            href="/contact"
+          <Link to="/contact"
             className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition"
           >
             Contact Us Today
-          </a>
+          </Link>
         </div>
       </section>
     </div>
