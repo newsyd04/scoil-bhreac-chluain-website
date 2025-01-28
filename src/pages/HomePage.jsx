@@ -87,7 +87,7 @@ const HomePage = () => {
 
       {/* News Section */}
       <section className="py-12 bg-gray-50">
-        <div className="container mx-auto px-4">
+        <div className="container mx-auto px-4 lg:px-20">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-6 text-center">
             Latest News
           </h2>
@@ -137,7 +137,7 @@ const HomePage = () => {
       </section>
 
       {/* Call to Action */}
-      <section className="py-16 bg-blue-600 text-white">
+      <section className="py-16 bg-sbc-blue text-white">
         <div className="container mx-auto px-4 text-center">
           <h2 className="text-4xl font-extrabold mb-6">
             Ready to Join Us?
@@ -148,7 +148,7 @@ const HomePage = () => {
             more.
           </p>
           <Link to="/contact"
-            className="inline-block bg-white text-blue-600 px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition"
+            className="inline-block bg-white text-sbc-blue px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition"
           >
             Contact Us Today
           </Link>

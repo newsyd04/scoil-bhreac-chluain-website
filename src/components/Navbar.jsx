@@ -6,12 +6,12 @@ export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="bg-blue-600 sticky top-0 z-50 text-white shadow-md">
-      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
+    <nav className="bg-sbc-blue sticky top-0 z-50 text-white shadow-2xl">
+      <div className="container mx-auto px-6 lg:px-32 py-5 flex justify-between items-center">
         {/* Logo */}
         <div className="text-2xl font-bold flex flex-row items-center">
           <div>
-            <img className="w-24" src={logo} alt="School Logo" />
+            <img className="w-12 pr-4" src={logo} alt="School Logo" />
           </div>
           <div>
             <Link to="/" className="hover:text-yellow-300 transition">
@@ -19,30 +19,29 @@ export default function Navbar() {
             </Link>
           </div>
         </div>
-
         {/* Desktop Menu */}
-        <ul className="hidden md:flex space-x-6 text-lg">
+        <ul className="hidden md:flex space-x-6 text-lg items-center">
           <li>
-            <Link to="/" className="hover:text-yellow-300 transition">
+            <Link to="/" className="hover:text-sbc-yellow transition">
               Home
             </Link>
           </li>
           <li>
-            <Link to="/about-us" className="hover:text-yellow-300 transition">
+            <Link to="/about-us" className="hover:text-sbc-yellow transition">
               About Us
             </Link>
           </li>
           <li>
             <Link
               to="/parents-information"
-              className="hover:text-yellow-300 transition"
+              className="hover:text-sbc-yellow transition"
             >
               Parents Information
             </Link>
           </li>
-          <li>
-            <Link to="/contact" className="hover:text-yellow-300 transition">
-              Contact
+          <li className="p-2 bg-sbc-yellow rounded-md">
+            <Link to="/contact" className="hover:bg-sbc-y transition text-sbc-blue text-base font-extrabold">
+              CONTACT
             </Link>
           </li>
         </ul>
@@ -71,7 +70,7 @@ export default function Navbar() {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <ul className="md:hidden bg-blue-700 text-lg space-y-2 p-4">
+        <ul className="md:hidden bg-sbc-blue text-lg space-y-2 p-4">
           <li>
             <Link to="/" className="block hover:text-yellow-300 transition">
               Home
