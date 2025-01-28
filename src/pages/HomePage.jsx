@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 
 const HomePage = () => {
+  const baseUrl = import.meta.env.BASE_URL;
   const slides = [
     {
       image: "https://via.placeholder.com/1200x600?text=Welcome+to+Our+School",
@@ -61,19 +62,19 @@ const HomePage = () => {
             applications for the upcoming academic year.
           </p>
           <div className="flex flex-col max-w-2xl gap-4 px-4 sm:px-20 md:px-40 justify-center items-center mx-auto">
-            <a
-                href="/Admission-Application-Form.pdf"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition hover:bg-blue-700"
-            >
-                Download Application
-            </a>
-            <a
-                href="/Annual-Admissions-Notice-2024-2025.pdf"
-                className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition hover:bg-blue-700"
-            >
-                Download Admissions Notice
-            </a>
-          </div>
+          <a
+            href={`${baseUrl}/Admission-Application-Form.pdf`}
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition hover:bg-blue-700"
+          >
+            Download Application
+          </a>
+          <a
+            href={`${baseUrl}/Annual-Admissions-Notice-2024-2025.pdf`}
+            className="inline-block bg-blue-600 text-white px-8 py-4 rounded-full text-lg font-semibold shadow-lg hover:shadow-xl transition hover:bg-blue-700"
+          >
+            Download Admissions Notice
+          </a>
+        </div>
         </div>
       </section>
 
