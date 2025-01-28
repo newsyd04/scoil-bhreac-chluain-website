@@ -14,7 +14,7 @@ export default function Navbar() {
             <img className="w-12 pr-4" src={logo} alt="School Logo" />
           </div>
           <div>
-            <Link to="/" className="hover:text-yellow-300 transition">
+            <Link to="/">
               Scoil Bhreac Chluain
             </Link>
           </div>
@@ -72,7 +72,7 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden bg-sbc-blue text-lg space-y-2 p-4">
           <li>
-            <Link to="/" className="block hover:text-yellow-300 transition">
+            <Link to="/" className="block hover:text-yellow-300 transition" onClick={() => setIsOpen(!isOpen)}>
               Home
             </Link>
           </li>
@@ -80,6 +80,7 @@ export default function Navbar() {
             <Link
               to="/about-us"
               className="block hover:text-yellow-300 transition"
+              onClick={() => setIsOpen(!isOpen)}
             >
               About Us
             </Link>
@@ -88,12 +89,13 @@ export default function Navbar() {
             <Link
               to="/parents-information"
               className="block hover:text-yellow-300 transition"
+              onClick={() => setIsOpen(!isOpen)}
             >
               Parent's Information
             </Link>
           </li>
           <li>
-            <Link to="/contact" className="block hover:text-yellow-300 transition">
+            <Link to="/contact" className="block hover:text-yellow-300 transition" onClick={() => setIsOpen(!isOpen)}>
               Contact
             </Link>
           </li>

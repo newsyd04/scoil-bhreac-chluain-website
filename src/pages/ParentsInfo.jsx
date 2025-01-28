@@ -1,16 +1,17 @@
-import React from "react";
-import { useEffect } from "react";
+import React, { useEffect, useState } from "react";
+import { Link, scroller } from "react-scroll"; // Smooth scrolling with offset
 
 const ParentsInfo = () => {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
+  const [activeSection, setActiveSection] = useState("parents-association");
+
   const sections = [
     {
+      id: "parents-association",
       title: "Parents' Association",
       content: `We are fortunate to have a very active Parents Association. They are a vital part of the school community. They organise many successful fundraising events throughout the year including Bingo, the Last Man Standing, the Annual School Walk and Communion and Confirmation receptions.`,
     },
     {
+      id: "parental-involvement",
       title: "Parental Involvement",
       content: `
       As a Catholic school, we believe that the school is not an isolated unit but a union of many people who come together to give it its life and meaning.
@@ -32,6 +33,7 @@ const ParentsInfo = () => {
       We are committed to methods of evaluating and improving channels of communication between school and parents. Our evaluation shall be ongoing and continuous, as we make every effort to make parents feel welcome and valued at all times.`,
     },
     {
+      id: "home-school-liaison",
       title: "Home / School Liaison",
       content: `
       Frequent communication is of vital importance in developing and nurturing cooperation between home and school. Please refer to the school's Communication Policy in the Policy Section of our website.
@@ -47,6 +49,7 @@ const ParentsInfo = () => {
       A child’s parents are the most effective teacher he/she will ever have. The home environment determines to a great extent the child’s progress in school. To achieve a high standard of learning, a high level of cooperation between teachers, parents, and children is needed.`,
     },
     {
+      id: "routines-info",
       title: "Routines and General Information",
       content: `
       - School starts  at 9.20 am.  The school staff offer supervision from 9:10 am onwards. The Board of Management does not accept responsibility for any child/ children on the school premises before 9:10am .It is important that the children develop the habit of being punctual for school.
@@ -65,33 +68,111 @@ const ParentsInfo = () => {
     },
   ];
 
+
+  useEffect(() => {
+    // Scroll-to-top behavior removed to prevent interference
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            setActiveSection(entry.target.id);
+          }
+        });
+      },
+      { threshold: 0.6 } // Trigger when section is 60% visible
+    );
+
+    sections.forEach((section) => {
+      const sectionElement = document.getElementById(section.id);
+      if (sectionElement) observer.observe(sectionElement);
+    });
+
+    return () => {
+      sections.forEach((section) => {
+        const sectionElement = document.getElementById(section.id);
+        if (sectionElement) observer.unobserve(sectionElement);
+      });
+    };
+  }, [sections]);
+
+  const scrollToSection = (id) => {
+    scroller.scrollTo(id, {
+      smooth: true,
+      offset: -80, // Adjust this value for the sticky navbar height
+      duration: 500,
+    });
+  };
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8">
-        <header className="text-center mb-12">
-          <h1 className="text-4xl font-extrabold text-gray-900">
-            Parents' Information
-          </h1>
-          <p className="text-lg text-gray-500 mt-4">
-            Discover everything you need to know as a parent at Scoil Bhreac
-            Chluain. From routines to parental involvement, we’re here to
-            support you.
-          </p>
-          <hr className="mt-6"/>
-        </header>
-        {sections.map((section, index) => (
-          <section
-            key={index}
-            className="mb-12 pb-8 border-b last:border-none last:pb-0"
-          >
-            <h2 className="text-3xl font-bold text-gray-800 mb-4 text-center">
-              {section.title}
-            </h2>
-            <p className="text-gray-700 whitespace-pre-line leading-relaxed">
-              {section.content}
+      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">
+        {/* Sidebar Navigation for Desktop */}
+        <aside className="hidden lg:block lg:w-1/4 bg-blue-50 p-6 rounded-lg shadow-md sticky top-20 h-fit">
+          <h3 className="text-xl font-bold text-blue-600 mb-4">Quick Links</h3>
+          <ul className="space-y-4">
+            {sections.map((section) => (
+              <li key={section.id}>
+                <button
+                  onClick={() => scrollToSection(section.id)}
+                  className={`text-blue-600 hover:text-blue-800 transition cursor-pointer ${
+                    activeSection === section.id ? "font-bold underline" : ""
+                  }`}
+                >
+                  {section.title}
+                </button>
+              </li>
+            ))}
+          </ul>
+        </aside>
+
+        {/* Breadcrumb Navigation for Mobile */}
+        <div className="lg:hidden bg-blue-50 p-4 rounded-lg shadow-md">
+          <div className="text-sm text-blue-600 font-semibold flex flex-wrap items-center">
+            {sections.map((section, index) => (
+              <React.Fragment key={section.id}>
+                <button
+                  onClick={() => scrollToSection(section.id)}
+                  className={`hover:underline cursor-pointer ${
+                    activeSection === section.id ? "text-blue-800 font-bold" : ""
+                  }`}
+                >
+                  {section.title}
+                </button>
+                {index < sections.length - 1 && (
+                  <span className="mx-2 text-gray-500">{`>`}</span>
+                )}
+              </React.Fragment>
+            ))}
+          </div>
+        </div>
+
+        {/* Main Content */}
+        <main className="lg:w-3/4 bg-white rounded-xl shadow-lg p-8">
+          <header className="text-center mb-12">
+            <h1 className="text-4xl font-extrabold text-gray-900">
+              Parents' Information
+            </h1>
+            <p className="text-lg text-gray-500 mt-4">
+              Discover everything you need to know as a parent at Scoil Bhreac
+              Chluain.
             </p>
-          </section>
-        ))}
+            <hr className="mt-6" />
+          </header>
+          {sections.map((section) => (
+            <section
+              key={section.id}
+              id={section.id}
+              className="mb-12 pb-8 border-b last:border-none last:pb-0"
+            >
+              <h2 className="text-3xl font-bold text-gray-800 mb-4 flex items-center">
+                {section.title}
+              </h2>
+              <p className="text-gray-700 whitespace-pre-line leading-relaxed">
+                {section.content}
+              </p>
+            </section>
+          ))}
+        </main>
       </div>
     </div>
   );

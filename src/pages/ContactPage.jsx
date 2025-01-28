@@ -23,7 +23,7 @@ const ContactPage = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
           {/* Location */}
           <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="flex-shrink-0 bg-blue-100 text-sbc-blue rounded-full w-12 h-12 flex items-center justify-center">
               <i className="fa-solid fa-location-dot text-xl"></i>
             </div>
             <div>
@@ -36,7 +36,7 @@ const ContactPage = () => {
 
           {/* Email */}
           <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="flex-shrink-0 bg-blue-100 text-sbc-blue rounded-full w-12 h-12 flex items-center justify-center">
               <i className="fa-solid fa-envelope text-xl"></i>
             </div>
             <div>
@@ -54,7 +54,7 @@ const ContactPage = () => {
 
           {/* Website */}
           <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="flex-shrink-0 bg-blue-100 text-sbc-blue rounded-full w-12 h-12 flex items-center justify-center">
               <i className="fa-solid fa-globe text-xl"></i>
             </div>
             <div>
@@ -74,7 +74,7 @@ const ContactPage = () => {
 
           {/* Phone */}
           <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="flex-shrink-0 bg-blue-100 text-sbc-blue rounded-full w-12 h-12 flex items-center justify-center">
               <i className="fa-solid fa-phone text-xl"></i>
             </div>
             <div>
@@ -85,7 +85,7 @@ const ContactPage = () => {
 
           {/* Mobile */}
           <div className="flex items-center space-x-4">
-            <div className="flex-shrink-0 bg-blue-100 text-blue-600 rounded-full p-3">
+            <div className="flex-shrink-0 bg-blue-100 text-sbc-blue rounded-full w-12 h-12 flex items-center justify-center">
               <i className="fa-solid fa-mobile text-xl"></i>
             </div>
             <div>
