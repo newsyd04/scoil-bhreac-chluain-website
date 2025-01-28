@@ -1,5 +1,6 @@
 import React, { useState } from "react";
-import logo from "../assets/logo.png"
+import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import logo from "../assets/logo.png";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -8,32 +9,41 @@ export default function Navbar() {
     <nav className="bg-blue-600 sticky top-0 z-50 text-white shadow-md">
       <div className="container mx-auto px-6 py-5 flex justify-between items-center">
         {/* Logo */}
-        <div className="text-2xl font-bold flex flex-row items-center ">
-            <div><img className="w-24" src={logo} /></div>
-            <div><a href="/">Scoil Bhreac Chluain</a></div>
+        <div className="text-2xl font-bold flex flex-row items-center">
+          <div>
+            <img className="w-24" src={logo} alt="School Logo" />
+          </div>
+          <div>
+            <Link to="/" className="hover:text-yellow-300 transition">
+              Scoil Bhreac Chluain
+            </Link>
+          </div>
         </div>
 
         {/* Desktop Menu */}
         <ul className="hidden md:flex space-x-6 text-lg">
           <li>
-            <a href="/" className="hover:text-yellow-300 transition">
+            <Link to="/" className="hover:text-yellow-300 transition">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/about-us" className="hover:text-yellow-300 transition">
+            <Link to="/about-us" className="hover:text-yellow-300 transition">
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/parents-information" className="hover:text-yellow-300 transition">
+            <Link
+              to="/parents-information"
+              className="hover:text-yellow-300 transition"
+            >
               Parents Information
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/contact" className="hover:text-yellow-300 transition">
+            <Link to="/contact" className="hover:text-yellow-300 transition">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
 
@@ -63,36 +73,30 @@ export default function Navbar() {
       {isOpen && (
         <ul className="md:hidden bg-blue-700 text-lg space-y-2 p-4">
           <li>
-            <a
-              href="/"
-              className="block hover:text-yellow-300 transition"
-            >
+            <Link to="/" className="block hover:text-yellow-300 transition">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/about-us"
+            <Link
+              to="/about-us"
               className="block hover:text-yellow-300 transition"
             >
               About Us
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/parents-information"
+            <Link
+              to="/parents-information"
               className="block hover:text-yellow-300 transition"
             >
               Parent's Information
-            </a>
+            </Link>
           </li>
           <li>
-            <a
-              href="/contact"
-              className="block hover:text-yellow-300 transition"
-            >
+            <Link to="/contact" className="block hover:text-yellow-300 transition">
               Contact
-            </a>
+            </Link>
           </li>
         </ul>
       )}
