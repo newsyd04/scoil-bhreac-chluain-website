@@ -1,6 +1,12 @@
 import React from "react";
+import { useEffect } from "react";
 
 const AboutPage = () => {
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const staffMembers = [
     { name: "Mary Murphy", title: "Principal", image: "https://placehold.co/150" },
     { name: "Anne Foley", title: "Deputy Principal", image: "https://placehold.co/150" },

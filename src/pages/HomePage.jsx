@@ -1,19 +1,25 @@
 import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom"; // Import Link from react-router-dom
+import slide1 from "../assets/slide1.jpg";
+import slide2 from "../assets/slide2.jpg";
+import slide3 from "../assets/slide3.jpg";
 
 const HomePage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const baseUrl = import.meta.env.BASE_URL;
   const slides = [
     {
-      image: "https://via.placeholder.com/1200x600?text=Welcome+to+Our+School",
+      image: slide1,
       caption: "Welcome to Scoil Bhreac Chluain!",
     },
     {
-      image: "https://via.placeholder.com/1200x600?text=Enroll+Today",
+      image: slide2,
       caption: "Enroll Your Child Today!",
     },
     {
-      image: "https://via.placeholder.com/1200x600?text=Building+Bright+Futures",
+      image: slide3,
       caption: "Building Bright Futures Together",
     },
   ];

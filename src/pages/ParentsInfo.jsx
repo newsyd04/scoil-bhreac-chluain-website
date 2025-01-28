@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 
 const ParentsInfo = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const sections = [
     {
       title: "Parents' Association",

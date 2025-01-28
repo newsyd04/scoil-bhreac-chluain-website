@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 
 const ContactPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
       {/* Contact Section */}

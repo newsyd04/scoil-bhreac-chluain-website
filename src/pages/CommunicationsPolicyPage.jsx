@@ -1,6 +1,10 @@
 import React from "react";
+import { useEffect } from "react";
 
 const CommunicationsPolicyPage = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const baseUrl = import.meta.env.BASE_URL;
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
