@@ -70,7 +70,7 @@ const HomePage = () => {
           </h2>
           <p className="text-lg text-gray-600 leading-relaxed mb-6">
             Discover how to join our school community. We are now accepting
-            applications for the upcoming academic year.
+            applications for the upcoming academic year 2026.
           </p>
           <div className="flex flex-col max-w-2xl gap-4 px-4 sm:px-20 md:px-40 justify-center items-center mx-auto">
             <a
