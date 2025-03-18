@@ -32,6 +32,11 @@ export default function Navbar() {
             </Link>
           </li>
           <li>
+            <Link to="/latest" className="hover:text-sbc-yellow transition">
+              Latest
+            </Link>
+          </li>
+          <li>
             <Link
               to="/parents-information"
               className="hover:text-sbc-yellow transition"
@@ -83,6 +88,15 @@ export default function Navbar() {
               onClick={() => setIsOpen(!isOpen)}
             >
               About Us
+            </Link>
+          </li>
+          <li>
+            <Link
+              to="/latest"
+              className="block hover:text-yellow-300 transition"
+              onClick={() => setIsOpen(!isOpen)}
+            >
+              Latest
             </Link>
           </li>
           <li>

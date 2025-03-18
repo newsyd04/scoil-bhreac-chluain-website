@@ -103,6 +103,10 @@ const ParentsInfo = () => {
     });
   };
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <div className="min-h-screen bg-gray-50 py-12 px-4">
       <div className="max-w-7xl mx-auto flex flex-col lg:flex-row gap-8">

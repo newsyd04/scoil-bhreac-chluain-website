@@ -5,6 +5,7 @@ import Footer from "./components/Footer";
 import HomePage from "./pages/HomePage";
 import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
+import LatestPage from "./pages/LatestPage";
 import ParentsInfo from "./pages/ParentsInfo";
 import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
 
@@ -18,6 +19,7 @@ function App() {
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/parents-information" element={<ParentsInfo />} />
         <Route path="/communications-policy" element={<CommunicationsPolicyPage />} />
+        <Route path="/latest" element={<LatestPage />} />
       </Routes>
       <Footer />
     </div>
