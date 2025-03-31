@@ -17,5 +17,5 @@ export default defineConfig({
       },
     },
   },
-  base: isProduction ? "/scoil-bhreac-chluain-website/" : "/", // Use "/" for local dev
+  base: "/",
 });
