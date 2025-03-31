@@ -8,6 +8,8 @@ import AboutPage from "./pages/AboutPage";
 import LatestPage from "./pages/LatestPage";
 import ParentsInfo from "./pages/ParentsInfo";
 import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
+import LoginPage from "./pages/LoginPage";
+import PostUploadPage from "./pages/PostUploadPage";
 
 function App() {
   return (
@@ -20,6 +22,9 @@ function App() {
         <Route path="/parents-information" element={<ParentsInfo />} />
         <Route path="/communications-policy" element={<CommunicationsPolicyPage />} />
         <Route path="/latest" element={<LatestPage />} />
+        <Route path="/login" element={<LoginPage />} />
+        <Route path="/post-upload" element={<PostUploadPage />} />
+
       </Routes>
       <Footer />
     </div>
