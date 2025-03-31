@@ -10,6 +10,7 @@ import ParentsInfo from "./pages/ParentsInfo";
 import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
 import LoginPage from "./pages/LoginPage";
 import PostUploadPage from "./pages/PostUploadPage";
+import PrivateRoute from "./components/PrivateRoute";
 
 function App() {
   return (
@@ -23,7 +24,14 @@ function App() {
         <Route path="/communications-policy" element={<CommunicationsPolicyPage />} />
         <Route path="/latest" element={<LatestPage />} />
         <Route path="/login" element={<LoginPage />} />
-        <Route path="/post-upload" element={<PostUploadPage />} />
+        <Route
+          path="/post-upload"
+          element={
+            <PrivateRoute>
+              <PostUploadPage />
+            </PrivateRoute>
+          }
+        />
       </Routes>
       <Footer />
     </div>
