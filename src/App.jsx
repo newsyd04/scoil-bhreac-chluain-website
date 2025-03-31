@@ -24,7 +24,6 @@ function App() {
         <Route path="/latest" element={<LatestPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/post-upload" element={<PostUploadPage />} />
-
       </Routes>
       <Footer />
     </div>
