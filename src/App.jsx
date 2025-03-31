@@ -10,7 +10,7 @@ import ParentsInfo from "./pages/ParentsInfo";
 import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
 import LoginPage from "./pages/LoginPage";
 import PostUploadPage from "./pages/PostUploadPage";
-import PrivateRoute from "./components/PrivateRoute";
+import PrivateRoute from "./pages/PrivateRoute";
 
 function App() {
   return (
