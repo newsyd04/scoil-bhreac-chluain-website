@@ -8,53 +8,53 @@ const AboutPage = () => {
   }, []);
 
   const staffMembers = [
-    { name: "Mary Murphy", title: "Principal", image: "https://placehold.co/150" },
-    { name: "Anne Foley", title: "Deputy Principal", image: "https://placehold.co/150" },
-    { name: "Tricia Kennedy", title: "School Secretary", image: "https://placehold.co/150" },
-    { name: "Caitríona Uí Ghráinne", title: "Naoináin Bheaga/ Mhóra", image: "https://placehold.co/150" },
-    { name: "Michelle Russell", title: "Rang 1/2", image: "https://placehold.co/150" },
-    { name: "Gail Ní Shúilleabháin", title: "Rang 3/4", image: "https://placehold.co/150" },
-    { name: "Aoife Thanner", title: "Rang 3/4", image: "https://placehold.co/150" },
-    { name: "Niamh Finn", title: "Rang 5/6", image: "https://placehold.co/150" },
+    { name: "Mary Murphy", title: "Principal", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Anne Foley", title: "Deputy Principal", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Tricia Kennedy", title: "School Secretary", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Caitríona Uí Ghráinne", title: "Naoináin Bheaga/ Mhóra", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Michelle Russell", title: "Rang 1/2", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Gail Ní Shúilleabháin", title: "Rang 3/4", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Aoife Thanner", title: "Rang 3/4", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
+    { name: "Niamh Finn", title: "Rang 5/6", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fisobarscience-1bfd8.kxcdn.com%2Fwp-content%2Fuploads%2F2020%2F09%2Fdefault-profile-picture1.jpg&f=1&nofb=1&ipt=16c4f69f00caa12820ed5e58afdea3582c086a204a901abb7d890a9a7987a5c2" },
   ];
 
   const groupMembers = [
     {
       name: "Mary Murphy, Anne Foley and Mary Dorgan",
       title: "SET Team",
-      image: "https://placehold.co/150",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
     {
       name: "Mary Falvey, Mairead Flahive, Róisín O' Connor, Mary Sayers, Edwina Knightly, Ciara Murphy",
       title: "SNA Team",
-      image: "https://placehold.co/150",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
     {
       name: "Clár Ui Mhurchadha",
       title: "EAL Teacher",
-      image: "https://placehold.co/150",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
     {
       name: "Susan Brosnan",
       title: "Bus Escort",
-      image: "https://placehold.co/150",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
     {
       name: "Martin Knightly",
       title: "School Caretaker",
-      image: "https://placehold.co/150",
+      image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
   ];
 
   const BOMMembers = [
-    { name: "John Hanafin", title: "Chairperson", image: "https://placehold.co/150" },
-    { name: "Fr. Michael Moynihan", title: "Patron's Nominee", image: "https://placehold.co/150" },
-    { name: "Mary Murphy", title: "School Principal", image: "https://placehold.co/150" },
-    { name: "Caitríona Uí Ghráinne", title: "Teachers' Nominee", image: "https://placehold.co/150" },
-    { name: "Annemarie Curran", title: "Parents' Nominee", image: "https://placehold.co/150" },
-    { name: "Emmet Kennedy", title: "Parents' Nominee", image: "https://placehold.co/150" },
-    { name: "Trish Moriarty", title: "Community Nominee", image: "https://placehold.co/150" },
-    { name: "P.J. Foley", title: "Community Nominee", image: "https://placehold.co/150" },
+    { name: "John Hanafin", title: "Chairperson", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Fr. Michael Moynihan", title: "Patron's Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Mary Murphy", title: "School Principal", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Caitríona Uí Ghráinne", title: "Teachers' Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Annemarie Curran", title: "Parents' Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Emmet Kennedy", title: "Parents' Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "Trish Moriarty", title: "Community Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
+    { name: "P.J. Foley", title: "Community Nominee", image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f" },
   ];
 
   return (

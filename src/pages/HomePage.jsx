@@ -14,16 +14,12 @@ const HomePage = () => {
 
   const slides = [
     {
-      image: slide1,
+      image: slide3,
       caption: "Welcome to Scoil Bhreac Chluain!",
     },
     {
       image: slide2,
       caption: "Enroll Your Child Today!",
-    },
-    {
-      image: slide3,
-      caption: "Building Bright Futures Together",
     },
   ];
 
