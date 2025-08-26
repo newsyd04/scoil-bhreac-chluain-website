@@ -93,7 +93,8 @@ const HomePage = () => {
       {/* ================= Hero ================= */}
       <section aria-label="School highlights" className="relative isolate">
         <div className="relative w-full bg-gray-900">
-          <div className="relative h-[46vh] min-h-[360px] md:h-[60vh] lg:h-[68vh] overflow-hidden">
+          {/* Option A: Taller mobile hero using svh + better focal point */}
+          <div className="relative h-[78svh] min-h-[360px] md:h-[60vh] lg:h-[68vh] overflow-hidden">
             {slides.map((s, i) => (
               <div
                 key={i}
@@ -105,36 +106,41 @@ const HomePage = () => {
                 <img
                   src={s.image}
                   alt={s.alt}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-[center_30%]"
                   loading={i === 0 ? "eager" : "lazy"}
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-black/10" />
+                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/40 to-transparent" />
               </div>
             ))}
           </div>
 
-          <div className="absolute inset-0 flex items-center">
+          {/* Option A + B: Bottom-aligned content on mobile with a glass card */}
+          <div className="absolute inset-0 flex items-end md:items-center pb-[calc(env(safe-area-inset-bottom,0)+1.25rem)]">
             <div className="mx-auto w-full max-w-6xl px-4">
               <div className="max-w-2xl">
-                <h1 className="text-3xl md:text-5xl font-extrabold text-white leading-tight">
-                  {slides[idx].headline}
-                </h1>
-                <p className="mt-3 md:mt-4 text-base md:text-lg text-white/90">
-                  {slides[idx].sub}
-                </p>
-                <div className="mt-6 flex flex-col sm:flex-row gap-3">
-                  <a
-                    href={`${baseUrl}/Admission-Application-Form.pdf`}
-                    className="inline-flex justify-center rounded-full px-6 py-3 bg-white text-sbc-blue font-semibold shadow hover:shadow-md transition"
-                  >
-                    Download Application
-                  </a>
-                  <a
-                    href={`${baseUrl}/Annual-Admissions-Notice-2024-2025.pdf`}
-                    className="inline-flex justify-center rounded-full px-6 py-3 bg-white/10 text-white ring-1 ring-white/40 hover:bg-white/20 transition"
-                  >
-                    Admissions Notice
-                  </a>
+                {/* Option B: subtle glass card only on mobile */}
+                <div className="rounded-2xl bg-black/35 backdrop-blur-sm p-4 md:bg-transparent md:backdrop-blur-0 md:p-0">
+                  {/* Option E: fluid type via clamp + tighter leading */}
+                  <h1 className="text-[clamp(1.75rem,6vw,2.75rem)] md:text-5xl font-extrabold text-white leading-[1.1] tracking-tight">
+                    {slides[idx].headline}
+                  </h1>
+                  <p className="mt-2 md:mt-4 text-[clamp(0.95rem,3.6vw,1.125rem)] text-white/90">
+                    {slides[idx].sub}
+                  </p>
+                  <div className="mt-5 flex flex-col sm:flex-row gap-3">
+                    <a
+                      href={`${baseUrl}/Admission-Application-Form.pdf`}
+                      className="inline-flex justify-center rounded-full px-6 py-3 bg-white text-sbc-blue font-semibold shadow hover:shadow-md transition"
+                    >
+                      Download Application
+                    </a>
+                    <a
+                      href={`${baseUrl}/Annual-Admissions-Notice-2024-2025.pdf`}
+                      className="inline-flex justify-center rounded-full px-6 py-3 bg-white/10 text-white ring-1 ring-white/40 hover:bg-white/20 transition"
+                    >
+                      Admissions Notice
+                    </a>
+                  </div>
                 </div>
               </div>
             </div>
