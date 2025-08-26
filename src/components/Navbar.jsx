@@ -9,18 +9,12 @@ export default function Navbar() {
   // Close menu on route change
   useEffect(() => setIsOpen(false), [pathname]);
 
-  const navItem = (
-    to,
-    label,
-    extra = ""
-  ) => (
+  const NavLink = ({ to, label }) => (
     <Link
       to={to}
-      className={`relative px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 transition-colors hover:text-sbc-yellow ${extra}`}
+      className="relative px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 transition-colors hover:text-sbc-yellow after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-sbc-yellow after:transition-all after:duration-300 hover:after:w-full focus-visible:after:w-full"
     >
-      <span>{label}</span>
-      {/* underline only on hovered/focused item */}
-      <span className="pointer-events-none absolute left-0 -bottom-1 h-0.5 w-0 bg-sbc-yellow transition-all duration-300 group-hover:w-0 hover:w-full focus-visible:w-full" />
+      {label}
     </Link>
   );
 
@@ -36,10 +30,10 @@ export default function Navbar() {
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-6">
           <div className="flex items-center gap-1">
-            {navItem("/", "Home")}
-            {navItem("/about-us", "About Us")}
-            {navItem("/latest", "Latest")}
-            {navItem("/parents-information", "Parents Information")}
+            <NavLink to="/" label="Home" />
+            <NavLink to="/about-us" label="About Us" />
+            <NavLink to="/latest" label="Latest" />
+            <NavLink to="/parents-information" label="Parents Information" />
           </div>
           <Link
             to="/contact"
@@ -57,28 +51,20 @@ export default function Navbar() {
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
         >
-          {/* Animated burger to X */}
-          <div className="relative w-6 h-6">
-            <span
-              className={`absolute left-0 top-1 block h-[2px] w-6 bg-current transition-transform duration-300 ${
-                isOpen ? "translate-y-2 rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-1/2 block h-[2px] w-6 -translate-y-1/2 bg-current transition-opacity duration-300 ${
-                isOpen ? "opacity-0" : "opacity-100"
-              }`}
-            />
-            <span
-              className={`absolute left-0 bottom-1 block h-[2px] w-6 bg-current transition-transform duration-300 ${
-                isOpen ? "-translate-y-2 -rotate-45" : ""
-              }`}
-            />
-          </div>
+          {/* Simple burger → X icon */}
+          {isOpen ? (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          ) : (
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" className="h-6 w-6">
+              <path strokeLinecap="round" strokeLinejoin="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          )}
         </button>
       </div>
 
-      {/* Mobile dropdown — same structure as your original, but polished */}
+      {/* Mobile dropdown */}
       <div
         id="mobile-menu"
         className={`md:hidden overflow-hidden transition-[max-height,opacity] duration-300 ease-out ${
@@ -88,34 +74,22 @@ export default function Navbar() {
         <div className="mx-4 mb-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg">
           <ul className="py-2 text-base">
             <li>
-              <Link
-                to="/"
-                className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition"
-              >
+              <Link to="/" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Home
               </Link>
             </li>
             <li>
-              <Link
-                to="/about-us"
-                className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition"
-              >
+              <Link to="/about-us" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 About Us
               </Link>
             </li>
             <li>
-              <Link
-                to="/latest"
-                className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition"
-              >
+              <Link to="/latest" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Latest
               </Link>
             </li>
             <li>
-              <Link
-                to="/parents-information"
-                className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition"
-              >
+              <Link to="/parents-information" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Parents Information
               </Link>
             </li>
