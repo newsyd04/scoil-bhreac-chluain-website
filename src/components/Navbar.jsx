@@ -1,6 +1,8 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
+
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -20,7 +22,34 @@ export default function Navbar() {
 
   return (
     <nav className="bg-white sticky top-0 z-50 text-sbc-blue shadow-2xl">
-      <div className="bg-blue-800 h-7 w-full" />
+
+      <div className="bg-blue-800 h-9 w-full text-white text-sm">
+        <div className="container mx-auto h-full flex items-center justify-between px-4 sm:px-6 lg:px-32">
+          {/* Contact Info */}
+          <div className="flex items-center gap-6">
+            <a
+              href="tel:0667124161"
+              className="flex font-semibold items-center gap-1 hover:underline"
+            >
+              <PhoneIcon className="h-4 w-4" />
+              066 7124161
+            </a>
+            <a
+              href="mailto:info@hfstralee.com"
+              className="flex font-semibold items-center gap-1 hover:underline"
+            >
+              <EnvelopeIcon className="h-4 w-4" />
+              info@hfstralee.com
+            </a>
+          </div>
+
+          {/* Staff Login */}
+          <a href="/login" className="hover:underline font-bold">
+            Staff Login
+          </a>
+        </div>
+      </div>
+
       <div className="container mx-auto px-6 lg:px-32 py-6 flex items-center justify-between">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3">
