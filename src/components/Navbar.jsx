@@ -1,8 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/logo.png";
-import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/outline";
-
+import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
