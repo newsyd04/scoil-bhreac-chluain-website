@@ -9,7 +9,10 @@ module.exports = {
       colors: {
         'sbc-blue': '#092145',
         'sbc-yellow': '#f3c744',
-      }
+      },
+      fontFamily: {
+        sketch: ['"Cabin Sketch"', 'cursive'],
+      },
     },
   },
   plugins: [],

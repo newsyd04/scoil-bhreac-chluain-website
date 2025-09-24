@@ -12,15 +12,16 @@ export default function Navbar() {
   const NavLink = ({ to, label }) => (
     <Link
       to={to}
-      className="relative px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 transition-colors hover:text-sbc-yellow after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-sbc-yellow after:transition-all after:duration-300 hover:after:w-full focus-visible:after:w-full"
+      className="relative px-2 py-1 rounded focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60 transition-colors text-blue-900 hover:text-blue-900 after:absolute after:left-0 after:-bottom-1 after:h-0.5 after:w-0 after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full focus-visible:after:w-full"
     >
       {label}
     </Link>
   );
 
   return (
-    <nav className="bg-sbc-blue sticky top-0 z-50 text-white shadow-2xl">
-      <div className="container mx-auto px-6 lg:px-32 py-4 flex items-center justify-between">
+    <nav className="bg-white sticky top-0 z-50 text-sbc-blue shadow-2xl">
+      <div className="bg-blue-800 h-7 w-full" />
+      <div className="container mx-auto px-6 lg:px-32 py-6 flex items-center justify-between">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3">
           <img className="w-11 h-11 object-contain" src={logo} alt="School Logo" />
@@ -29,9 +30,10 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-1">
+          <div className="flex items-center gap-1 text-lg font-semibold">
             <NavLink to="/" label="Home" />
-            <NavLink to="/about-us" label="About Us" />
+            <NavLink to="/about-us" label="About" />
+            <NavLink to="/green-flag" label="Green Flag" />
             <NavLink to="/latest" label="Latest" />
             <NavLink to="/parents-information" label="Parents Information" />
           </div>
@@ -39,14 +41,14 @@ export default function Navbar() {
             to="/contact"
             className="inline-flex items-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold text-sm px-5 py-2 shadow hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
-            CONTACT
+            CONTACT US
           </Link>
         </div>
 
         {/* Mobile toggle */}
         <button
           onClick={() => setIsOpen((v) => !v)}
-          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-white hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+          className="md:hidden inline-flex items-center justify-center rounded-md p-2 text-blue-900 hover:bg-white/10 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           aria-label={isOpen ? "Close menu" : "Open menu"}
           aria-expanded={isOpen}
           aria-controls="mobile-menu"
@@ -80,7 +82,12 @@ export default function Navbar() {
             </li>
             <li>
               <Link to="/about-us" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
-                About Us
+                About
+              </Link>
+            </li>
+            <li>
+              <Link to="/green-flag" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
+                Green Flag
               </Link>
             </li>
             <li>

@@ -11,6 +11,7 @@ import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
 import LoginPage from "./pages/LoginPage";
 import PostUploadPage from "./pages/PostUploadPage";
 import PrivateRoute from "./pages/PrivateRoute";
+import GreenFlagPage from "./pages/GreenFlagPage";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
         <Route path="/communications-policy" element={<CommunicationsPolicyPage />} />
         <Route path="/latest" element={<LatestPage />} />
         <Route path="/login" element={<LoginPage />} />
+        <Route path="/green-flag" element={<GreenFlagPage />} />
         <Route
           path="/post-upload"
           element={

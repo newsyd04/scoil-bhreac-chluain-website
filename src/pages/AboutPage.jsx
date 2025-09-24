@@ -1,5 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
+import PageBackground from "../components/PageBackground";
 
 const AboutPage = () => {
 
@@ -58,7 +59,7 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen px-4 bg-gray-50 flex flex-col items-center">
+    <div className="min-h-screen px-4 flex flex-col items-center">
       {/* About Section */}
       <section className="w-full max-w-6xl p-8 bg-white rounded-2xl shadow-lg my-12">
         <header className="text-center mb-8">
