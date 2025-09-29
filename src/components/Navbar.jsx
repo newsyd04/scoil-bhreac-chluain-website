@@ -58,16 +58,18 @@ export default function Navbar() {
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center gap-1 text-lg font-semibold">
+          <div className="flex items-center text-center gap-3 text-lg font-semibold">
             <NavLink to="/" label="Home" />
             <NavLink to="/about-us" label="About" />
             <NavLink to="/green-flag" label="Green Flag" />
+            <NavLink to="/policies" label="Policies" /> 
+           <NavLink to="/admissions" label="Admissions" />
             <NavLink to="/latest" label="Latest" />
             <NavLink to="/parents-information" label="Parents Information" />
           </div>
           <Link
             to="/contact"
-            className="inline-flex items-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold text-sm px-5 py-2 shadow hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            className="inline-flex text-center items-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold text-sm px-5 py-2 shadow hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
             CONTACT US
           </Link>
@@ -116,6 +118,16 @@ export default function Navbar() {
             <li>
               <Link to="/green-flag" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Green Flag
+              </Link>
+            </li>
+            <li>
+              <Link to="/policies" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
+                Policies
+              </Link>
+            </li>
+            <li>
+              <Link to="/Admissions" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
+                Admissions
               </Link>
             </li>
             <li>

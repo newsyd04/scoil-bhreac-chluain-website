@@ -99,7 +99,7 @@ const Footer = () => {
             <ul className="mt-4 space-y-2">
               <li>
                 <a
-                  href={`${baseUrl}Code-of-Behaviour-and-Anti-Bullying-Policy.pdf`}
+                  href="/policies/Code-of-Behaviour-and-Anti-Bullying-Policy.pdf"
                   className="text-sm text-gray-700 hover:text-blue-700"
                 >
                   Code of Behaviour & Anti-Bullying
@@ -107,7 +107,7 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={`${baseUrl}Annual-Admissions-Notice-2024-2025.pdf`}
+                  href="/admissions/Annual-Admissions-Notice-2024-2025.pdf"
                   className="text-sm text-gray-700 hover:text-blue-700"
                 >
                   Admissions Notice
@@ -115,16 +115,27 @@ const Footer = () => {
               </li>
               <li>
                 <a
-                  href={`${baseUrl}Admission-Application-Form.pdf`}
+                  href="/admissions/Admission-Application-Form.pdf"
                   className="text-sm text-gray-700 hover:text-blue-700"
                 >
                   Admission Application
                 </a>
               </li>
               <li>
-                <Link to="/communications-policy" className="text-sm text-gray-700 hover:text-blue-700">
+                <a
+                  href="/policies/PARENTSTAFF COMMUNICATION POLICY.pdf"
+                  className="text-sm text-gray-700 hover:text-blue-700"
+                >
                   Communications Policy
-                </Link>
+                </a>
+              </li>
+              <li>
+                <a
+                  href="/policies/PARENTSTAFF COMMUNICATION POLICY.pdf"
+                  className="text-sm text-gray-700 hover:text-blue-700"
+                >
+                  Enrolment Policy
+                </a>
               </li>
             </ul>
           </nav>
@@ -137,13 +148,13 @@ const Footer = () => {
             </p>
             <div className="mt-5 flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <a
-                href={`${baseUrl}Admission-Application-Form.pdf`}
+                href="/admissions/Admission-Application-Form.pdf"
                 className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
               >
                 Download Application
               </a>
               <a
-                href={`${baseUrl}Annual-Admissions-Notice-2024-2025.pdf`}
+                href="/admissions/Annual-Admissions-Notice-2024-2025.pdf"
                 className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold border border-blue-100 text-blue-700 hover:bg-blue-50"
               >
                 Admissions Notice

@@ -183,16 +183,16 @@ const HomePage = () => {
                   </p>
                   <div className="mt-5 flex flex-col sm:flex-row gap-3">
                     <a
-                      href={`${baseUrl}/Admission-Application-Form.pdf`}
+                      href="./about-us"
                       className="inline-flex justify-center rounded-full px-6 py-3 bg-white text-sbc-blue font-semibold shadow hover:shadow-md transition"
                     >
-                      Download Application
+                      Learn About Us
                     </a>
                     <a
-                      href={`${baseUrl}/Annual-Admissions-Notice-2024-2025.pdf`}
+                      href="./policies"
                       className="inline-flex justify-center rounded-full px-6 py-3 bg-white/10 text-white ring-1 ring-white/40 hover:bg-white/20 transition"
                     >
-                      Admissions Notice
+                      View School Policies
                     </a>
                   </div>
                 </div>

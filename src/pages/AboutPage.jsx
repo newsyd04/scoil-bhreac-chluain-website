@@ -1,6 +1,7 @@
 import React from "react";
 import { useEffect } from "react";
 import PageBackground from "../components/PageBackground";
+import shapesimg from '../assets/blobs.png';
 
 const AboutPage = () => {
 
@@ -59,85 +60,90 @@ const AboutPage = () => {
   ];
 
   return (
-    <div className="min-h-screen px-4 flex flex-col items-center">
-      {/* About Section */}
-      <section className="w-full max-w-6xl p-8 bg-white rounded-2xl shadow-lg my-12">
-        <header className="text-center mb-8">
-          <h2 className="text-4xl font-extrabold text-gray-900 mb-2">About Us</h2>
-          <p className="text-gray-500 text-lg">
-            Welcome to Scoil Bhreac Chluain, a vibrant school dedicated to fostering excellence in education and community values.
-          </p>
-        </header>
-        <div className="text-center mb-12">
-          <p className="mb-4">
-            At Scoil Bhreac Chluain, we are committed to creating a nurturing environment where every student can achieve their full potential.
-            <br />
-            Our school has a proud tradition of serving the community with passionate staff, innovative teaching methods, and state-of-the-art
-            facilities.
-            <hr className="mt-12"/>
-          </p>
-        </div>
+    <div className="relative min-h-screen w-full">
+        <img src={shapesimg} className='absolute inset-0 w-full h-full object-cover saturate-[1] z-0' />
 
-        <header className="text-center mb-8">
-          <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Meet Our Staff</h2>
-          <p className="text-gray-500 text-lg">Dedicated professionals who bring passion and excellence to their roles every day.</p>
-        </header>
+      <div className="min-h-screen px-4 flex flex-col items-center z-20 relative shadow-2xl shadow-black/30">
+        
+        {/* About Section */}
+        <section className="w-full max-w-6xl p-8 bg-white rounded-2xl shadow-lg my-12">
+          <header className="text-center mb-8">
+            <h2 className="text-4xl font-extrabold text-gray-900 mb-2">About Us</h2>
+            <p className="text-gray-500 text-lg">
+              Welcome to Scoil Bhreac Chluain, a vibrant school dedicated to fostering excellence in education and community values.
+            </p>
+          </header>
+          <div className="text-center mb-12">
+            <p className="mb-4">
+              At Scoil Bhreac Chluain, we are committed to creating a nurturing environment where every student can achieve their full potential.
+              <br />
+              Our school has a proud tradition of serving the community with passionate staff, innovative teaching methods, and state-of-the-art
+              facilities.
+              <hr className="mt-12"/>
+            </p>
+          </div>
 
-        {/* Individual Staff Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
-          {staffMembers.map((staff, index) => (
-            <div
-              key={index}
-              className="flex flex-col items-center text-center space-y-4 bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
-            >
-              <img src={staff.image} alt={staff.name} className="w-24 h-24 rounded-full object-cover" />
-              <div>
-                <h3 className="text-lg font-bold text-gray-900">{staff.name}</h3>
-                <p className="text-gray-500">{staff.title}</p>
-              </div>
-            </div>
-          ))}
-        </div>
+          <header className="text-center mb-8">
+            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Meet Our Staff</h2>
+            <p className="text-gray-500 text-lg">Dedicated professionals who bring passion and excellence to their roles every day.</p>
+          </header>
 
-        {/* Group Section */}
-        <div className="mb-12">
-          <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Specialized Teams</h3>
-          <div className="space-y-8">
-            {groupMembers.map((group, index) => (
+          {/* Individual Staff Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+            {staffMembers.map((staff, index) => (
               <div
                 key={index}
-                className="flex flex-col sm:flex-row items-center text-center sm:text-left bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
+                className="flex flex-col items-center text-center space-y-4 bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
               >
-                <img src={group.image} alt={group.title} className="w-24 h-24 rounded-full object-cover mb-4 sm:mb-0 sm:mr-6" />
+                <img src={staff.image} alt={staff.name} className="w-24 h-24 rounded-full object-cover" />
                 <div>
-                  <h4 className="text-lg font-bold text-gray-900">{group.title}</h4>
-                  <p className="text-gray-500">{group.name}</p>
+                  <h3 className="text-lg font-bold text-gray-900">{staff.name}</h3>
+                  <p className="text-gray-500">{staff.title}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-        {/* BOM Members Grid */}
-        <div>
-          <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Board of Management Members</h3>
-          <div className="space-y-8">
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
-            {BOMMembers.map((staff, index) => (
+
+          {/* Group Section */}
+          <div className="mb-12">
+            <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Specialized Teams</h3>
+            <div className="space-y-8">
+              {groupMembers.map((group, index) => (
                 <div
-                key={index}
-                className="flex flex-col items-center text-center space-y-4 bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
+                  key={index}
+                  className="flex flex-col sm:flex-row items-center text-center sm:text-left bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
                 >
-                <img src={staff.image} alt={staff.name} className="w-24 h-24 rounded-full object-cover" />
-                <div>
-                    <h3 className="text-lg font-bold text-gray-900">{staff.name}</h3>
-                    <p className="text-gray-500">{staff.title}</p>
+                  <img src={group.image} alt={group.title} className="w-24 h-24 rounded-full object-cover mb-4 sm:mb-0 sm:mr-6" />
+                  <div>
+                    <h4 className="text-lg font-bold text-gray-900">{group.title}</h4>
+                    <p className="text-gray-500">{group.name}</p>
+                  </div>
                 </div>
-                </div>
-            ))}
+              ))}
             </div>
           </div>
-        </div>
-      </section>
+          {/* BOM Members Grid */}
+          <div>
+            <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Board of Management Members</h3>
+            <div className="space-y-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+              {BOMMembers.map((staff, index) => (
+                  <div
+                  key={index}
+                  className="flex flex-col items-center text-center space-y-4 bg-gray-100 rounded-lg p-6 shadow-md hover:shadow-lg transition"
+                  >
+                  <img src={staff.image} alt={staff.name} className="w-24 h-24 rounded-full object-cover" />
+                  <div>
+                      <h3 className="text-lg font-bold text-gray-900">{staff.name}</h3>
+                      <p className="text-gray-500">{staff.title}</p>
+                  </div>
+                  </div>
+              ))}
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
     </div>
   );
 };
