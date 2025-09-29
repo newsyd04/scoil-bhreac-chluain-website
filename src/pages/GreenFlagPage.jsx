@@ -57,7 +57,7 @@ const GreenFlagPage = () => {
               <h3 className="text-3xl font-sketch text-green-700 text-center mb-6">
                 Our Eco Projects 📸
               </h3>
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 gap-6">
                 {["Placeholder 1", "Placeholder 2", "Placeholder 3", "Placeholder 4", "Placeholder 5", "Placeholder 6"].map(
                   (label, index) => (
                     <div
