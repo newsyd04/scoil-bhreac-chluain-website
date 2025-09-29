@@ -6,6 +6,7 @@ import slide3 from "../assets/slide3.jpg";
 import Calendar from "react-calendar";
 import shapesbg from "../assets/shapes-bg.png";
 import "react-calendar/dist/Calendar.css";
+import fallback from "../assets/fallback.jpg";
 
 const API_BASE = "https://webdev-backends.onrender.com";
 
@@ -269,10 +270,9 @@ const HomePage = () => {
                     >
                       <div className="aspect-[16/9] w-full overflow-hidden bg-gray-100">
                         <img
-                          src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse1.mm.bing.net%2Fth%2Fid%2FOIP.zKwVZge32-pSqnPVJUKTcQHaEK%3Fpid%3DApi&f=1"
+                          src={post.imageUrl || fallback}
                           alt={post.title || "Post image"}
                           className="h-full w-full object-cover"
-                          loading="lazy"
                         />
                       </div>
                       <div className="p-5">
@@ -290,7 +290,7 @@ const HomePage = () => {
                         <div className="mt-3 flex items-center justify-between">
                           <span className="text-xs text-gray-400">{post.type}</span>
                           <Link
-                            to="/latest"
+                            to={`/post/${post._id}`}
                             className="text-blue-700 font-semibold hover:underline"
                           >
                             Read more →

@@ -1,6 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { FileText, Upload, AlertCircle } from "lucide-react";
+import { FileText, AlertCircle } from "lucide-react";
+import lmsImg from "../assets/lms.png";
+import eventImg from "../assets/event.jpg";
+import announcementImg from "../assets/announcement.jpg";
 
 const PostUploadPage = () => {
   const [title, setTitle] = useState("");
@@ -15,6 +18,9 @@ const PostUploadPage = () => {
   const [file, setFile] = useState(null);
   const [changeMessage, setChangeMessage] = useState("");
   const [changeError, setChangeError] = useState("");
+
+  const stockImages = [lmsImg, eventImg, announcementImg];
+  const [selectedImage, setSelectedImage] = useState("");
 
   const navigate = useNavigate();
   const baseUrl = "https://webdev-backends.onrender.com";
@@ -37,14 +43,21 @@ const PostUploadPage = () => {
           "Content-Type": "application/json",
           Authorization: token,
         },
-        body: JSON.stringify({ title, content, type }),
+        body: JSON.stringify({
+          title,
+          content,
+          type,
+          imageUrl: selectedImage || null,
+        }),
       });
+
       const data = await response.json();
       if (response.ok) {
         setMessage("Post created successfully ✅");
         setTitle("");
         setContent("");
         setType("");
+        setSelectedImage("");
       } else {
         setError(data.message || "Failed to create post");
       }
@@ -54,7 +67,7 @@ const PostUploadPage = () => {
     }
   };
 
-  // Change Request
+  // Change Request (still allows file upload if needed)
   const handleChangeSubmit = async (e) => {
     e.preventDefault();
     setChangeError("");
@@ -74,9 +87,7 @@ const PostUploadPage = () => {
     try {
       const response = await fetch(`${baseUrl}/school/change-requests`, {
         method: "POST",
-        headers: {
-          Authorization: token,
-        },
+        headers: { Authorization: token },
         body: formData,
       });
       const data = await response.json();
@@ -98,7 +109,6 @@ const PostUploadPage = () => {
   return (
     <div className="min-h-screen bg-gray-50 px-6 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        
         {/* Post Upload Form */}
         <form
           onSubmit={handlePostSubmit}
@@ -142,6 +152,26 @@ const PostUploadPage = () => {
             />
           </div>
 
+          {/* Stock image selector only */}
+          <div className="mb-6">
+            <label className="block mb-1 font-medium">Choose a Stock Image</label>
+            <div className="flex gap-3 overflow-x-auto">
+              {stockImages.map((img) => (
+                <img
+                  key={img}
+                  src={img}
+                  alt="stock"
+                  onClick={() => setSelectedImage(img)}
+                  className={`w-24 h-16 object-cover cursor-pointer border-4 rounded ${
+                    selectedImage === img
+                      ? "border-blue-500"
+                      : "border-transparent"
+                  }`}
+                />
+              ))}
+            </div>
+          </div>
+
           <button
             type="submit"
             className="w-full bg-blue-600 text-white font-semibold p-3 rounded-lg hover:bg-blue-700 transition"
@@ -150,7 +180,7 @@ const PostUploadPage = () => {
           </button>
         </form>
 
-        {/* Change Request Form */}
+        {/* Change Request Form (still supports file upload) */}
         <form
           onSubmit={handleChangeSubmit}
           className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -216,17 +246,14 @@ const PostUploadPage = () => {
             </div>
           </div>
 
+          {/* Still allow file attachment for change requests */}
           <div className="mb-6">
             <label className="block mb-2 font-medium">Attach a File</label>
-            <label className="flex items-center justify-center w-full px-4 py-6 bg-gray-50 text-gray-600 border-2 border-dashed border-gray-300 rounded-lg cursor-pointer hover:bg-gray-100 transition">
-              <Upload className="w-5 h-5 mr-2 text-blue-600" />
-              <span>{file ? file.name : "Click to upload or drag & drop"}</span>
-              <input
-                type="file"
-                className="hidden"
-                onChange={(e) => setFile(e.target.files[0])}
-              />
-            </label>
+            <input
+              type="file"
+              onChange={(e) => setFile(e.target.files[0])}
+              className="block w-full text-gray-600"
+            />
           </div>
 
           <button
