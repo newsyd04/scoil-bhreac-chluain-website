@@ -89,7 +89,7 @@ const AboutPage = () => {
           </header>
 
           {/* Individual Staff Grid */}
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+          <div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
             {staffMembers.map((staff, index) => (
               <div
                 key={index}
@@ -126,7 +126,7 @@ const AboutPage = () => {
           <div>
             <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Board of Management Members</h3>
             <div className="space-y-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
+              <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
               {BOMMembers.map((staff, index) => (
                   <div
                   key={index}
