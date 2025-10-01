@@ -25,25 +25,25 @@ export default function Navbar() {
       <div className="bg-blue-800 h-9 w-full text-white text-sm">
         <div className="container mx-auto h-full flex items-center justify-between px-4 sm:px-6 lg:px-32">
           {/* Contact Info */}
-          <div className="flex items-center gap-6">
+          <div className="flex text-xs items-center gap-6">
             <a
-              href="tel:0667124161"
+              href="tel:0669157436"
               className="flex font-semibold items-center gap-1 hover:underline"
             >
               <PhoneIcon className="h-4 w-4" />
-              066 7124161
+              066 915 7436
             </a>
             <a
-              href="mailto:info@hfstralee.com"
+              href="mailto:s​coilbhreacchluain@gmail.com"
               className="flex font-semibold items-center gap-1 hover:underline"
             >
               <EnvelopeIcon className="h-4 w-4" />
-              info@hfstralee.com
+              s​coilbhreacchluain@gmail.com
             </a>
           </div>
 
           {/* Staff Login */}
-          <a href="/login" className="hover:underline font-bold">
+          <a href="/login" className="text-xs hover:underline font-bold hidden sm:hidden md:inline-block lg:inline-block ">
             Staff Login
           </a>
         </div>

@@ -29,7 +29,9 @@ function excerpt(text = "", len = 160) {
 }
 
 const HomePage = () => {
-  useEffect(() => window.scrollTo(0, 0), []);
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const baseUrl = import.meta.env.BASE_URL;
 
   // === Slides (simple + dependable) ===

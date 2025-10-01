@@ -32,6 +32,10 @@ const Latest = () => {
     fetchPosts();
   }, [activeFilter]);
 
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const postTypes = ["All", ...new Set(posts.map((post) => post.type))];
 
   // helper to shorten text

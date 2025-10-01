@@ -114,6 +114,10 @@ const ParentsInfo = () => {
     return () => document.removeEventListener("click", onClick);
   }, []);
 
+    useEffect(() => {
+      window.scrollTo(0, 0);
+    }, []);
+
   return (
     <main className="bg-white text-gray-900">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16">
