@@ -1,7 +1,7 @@
 // src/pages/HomePage.jsx
 import React, { useState, useEffect, useRef, useMemo } from "react";
 import { Link } from "react-router-dom";
-import slide2 from "../assets/slide2.jpg";
+import slide2 from "../assets/bg-1.jpg";
 import slide3 from "../assets/slide3.jpg";
 import Calendar from "react-calendar";
 import shapesbg from "../assets/shapes-bg.png";

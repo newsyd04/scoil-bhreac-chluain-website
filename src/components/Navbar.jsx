@@ -53,12 +53,12 @@ export default function Navbar() {
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3">
           <img className="w-11 h-11 object-contain" src={logo} alt="School Logo" />
-          <span className="text-lg font-extrabold tracking-tight">Scoil Bhreac Chluain</span>
+          <span className="text-lg font-quicksand font-bold text-[#03499d] tracking-tight">Scoil Bhreac Chluain</span>
         </Link>
 
         {/* Desktop menu */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex items-center text-center gap-3 text-lg font-semibold">
+          <div className="flex items-center font-quicksand text-center gap-3 text-md font-semibold">
             <NavLink to="/" label="Home" />
             <NavLink to="/about-us" label="About" />
             <NavLink to="/green-flag" label="Green Flag" />
@@ -69,7 +69,7 @@ export default function Navbar() {
           </div>
           <Link
             to="/contact"
-            className="inline-flex text-center items-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold text-sm px-5 py-2 shadow hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
+            className="inline-flex text-center font-quicksand text-sm items-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold px-5 py-2 shadow hover:shadow-md transition focus:outline-none focus-visible:ring-2 focus-visible:ring-white/60"
           >
             CONTACT US
           </Link>
@@ -104,7 +104,7 @@ export default function Navbar() {
         }`}
       >
         <div className="mx-4 mb-4 rounded-2xl border border-white/10 bg-white/5 backdrop-blur-sm shadow-lg">
-          <ul className="py-2 text-base">
+          <ul className="py-2 font-quicksand text-base">
             <li>
               <Link to="/" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Home
@@ -143,7 +143,7 @@ export default function Navbar() {
             <li className="px-4 pt-2">
               <Link
                 to="/contact"
-                className="block w-full text-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold px-5 py-3 shadow hover:shadow-md"
+                className="block font-quicksand w-full text-center rounded-full bg-sbc-yellow text-sbc-blue font-extrabold px-5 py-3 shadow hover:shadow-md"
               >
                 CONTACT
               </Link>

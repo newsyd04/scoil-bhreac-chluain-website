@@ -12,6 +12,8 @@ module.exports = {
       },
       fontFamily: {
         sketch: ['"Cabin Sketch"', 'cursive'],
+        quicksand: ['"Quicksand"', 'sans-serif'],
+
       },
     },
   },

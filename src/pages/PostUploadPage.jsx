@@ -1,9 +1,9 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { FileText, AlertCircle } from "lucide-react";
-import lmsImg from "../assets/lms.png";
-import eventImg from "../assets/event.jpg";
-import announcementImg from "../assets/announcement.jpg";
+import lmsImg from "/lms.png";
+import eventImg from "/event.jpg";
+import announcementImg from "/announcement.jpg";
 
 const PostUploadPage = () => {
   const [title, setTitle] = useState("");

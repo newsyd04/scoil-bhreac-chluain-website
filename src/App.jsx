@@ -18,7 +18,7 @@ import PostDetail from "./pages/PostDetail";
 
 function App() {
   return (
-    <div>
+    <div className="">
       <Navbar />
       <Routes>
         <Route path="/" element={<HomePage />} />
