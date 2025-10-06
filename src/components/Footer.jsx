@@ -90,6 +90,11 @@ const Footer = () => {
                   Contact
                 </Link>
               </li>
+              <li>
+                <Link to="/login" className="text-sm text-gray-700 hover:text-blue-700">
+                  Staff Login
+                </Link>
+              </li>
             </ul>
           </nav>
 
