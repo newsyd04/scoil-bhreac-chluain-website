@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { useNavigate } from "react-router-dom";
 import { FileText, AlertCircle } from "lucide-react";
 import lmsImg from "/lms.png";
 import eventImg from "/event.jpg";
@@ -22,14 +21,14 @@ const PostUploadPage = () => {
   const stockImages = [lmsImg, eventImg, announcementImg];
   const [selectedImage, setSelectedImage] = useState("");
 
-  const navigate = useNavigate();
   const baseUrl = "https://webdev-backends.onrender.com";
 
-  // Post Upload
+  // Create Post
   const handlePostSubmit = async (e) => {
     e.preventDefault();
     setError("");
     setMessage("");
+
     const token = localStorage.getItem("token");
     if (!token) {
       setError("You must be logged in to post");
@@ -67,42 +66,38 @@ const PostUploadPage = () => {
     }
   };
 
-  // Change Request (still allows file upload if needed)
+  // Submit Change Request (with free file upload)
   const handleChangeSubmit = async (e) => {
     e.preventDefault();
     setChangeError("");
     setChangeMessage("");
-    const token = localStorage.getItem("token");
-    if (!token) {
-      setChangeError("You must be logged in to submit a change request");
-      return;
-    }
 
     const formData = new FormData();
     formData.append("title", changeTitle);
-    formData.append("content", changeContent);
+    formData.append("change_details", changeContent);
     formData.append("urgency", urgency);
     if (file) formData.append("file", file);
 
     try {
-      const response = await fetch(`${baseUrl}/school/change-requests`, {
+      const response = await fetch(`${baseUrl}/school/change-request`, {
         method: "POST",
-        headers: { Authorization: token },
         body: formData,
       });
+
       const data = await response.json();
-      if (response.ok) {
-        setChangeMessage("Change request submitted successfully ✅");
+
+      if (data.success) {
+        setChangeMessage("Change request sent successfully ✅");
         setChangeTitle("");
         setChangeContent("");
         setUrgency("Medium");
         setFile(null);
       } else {
-        setChangeError(data.message || "Failed to submit change request");
+        setChangeError(data.message || "Failed to send change request ❌");
       }
     } catch (err) {
-      console.error(err);
-      setChangeError("An error occurred while submitting the change request");
+      console.error("Error:", err);
+      setChangeError("An error occurred while sending the change request ❌");
     }
   };
 
@@ -118,58 +113,45 @@ const PostUploadPage = () => {
           {error && <div className="mb-4 text-red-500">{error}</div>}
           {message && <div className="mb-4 text-green-600">{message}</div>}
 
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Title</label>
-            <input
-              type="text"
-              value={title}
-              onChange={(e) => setTitle(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              required
-            />
-          </div>
+          <input
+            type="text"
+            placeholder="Title"
+            value={title}
+            onChange={(e) => setTitle(e.target.value)}
+            className="w-full p-3 border rounded-lg mb-4"
+            required
+          />
+          <textarea
+            placeholder="Content"
+            value={content}
+            onChange={(e) => setContent(e.target.value)}
+            className="w-full p-3 border rounded-lg mb-4"
+            rows="4"
+            required
+          ></textarea>
+          <input
+            type="text"
+            placeholder="Type (e.g. Event, Announcement)"
+            value={type}
+            onChange={(e) => setType(e.target.value)}
+            className="w-full p-3 border rounded-lg mb-6"
+            required
+          />
 
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Content</label>
-            <textarea
-              value={content}
-              onChange={(e) => setContent(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Type</label>
-            <input
-              type="text"
-              value={type}
-              onChange={(e) => setType(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              placeholder="e.g. Announcement, Event, etc."
-              required
-            />
-          </div>
-
-          {/* Stock image selector only */}
-          <div className="mb-6">
-            <label className="block mb-1 font-medium">Choose a Stock Image</label>
-            <div className="flex gap-3 overflow-x-auto">
-              {stockImages.map((img) => (
-                <img
-                  key={img}
-                  src={img}
-                  alt="stock"
-                  onClick={() => setSelectedImage(img)}
-                  className={`w-24 h-16 object-cover cursor-pointer border-4 rounded ${
-                    selectedImage === img
-                      ? "border-blue-500"
-                      : "border-transparent"
-                  }`}
-                />
-              ))}
-            </div>
+          <div className="flex gap-3 overflow-x-auto mb-6">
+            {stockImages.map((img) => (
+              <img
+                key={img}
+                src={img}
+                alt="stock"
+                onClick={() => setSelectedImage(img)}
+                className={`w-24 h-16 object-cover cursor-pointer border-4 rounded ${
+                  selectedImage === img
+                    ? "border-blue-500"
+                    : "border-transparent"
+                }`}
+              />
+            ))}
           </div>
 
           <button
@@ -180,7 +162,7 @@ const PostUploadPage = () => {
           </button>
         </form>
 
-        {/* Change Request Form (still supports file upload) */}
+        {/* Change Request Form */}
         <form
           onSubmit={handleChangeSubmit}
           className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -193,9 +175,8 @@ const PostUploadPage = () => {
           </div>
 
           {changeError && (
-            <div className="mb-4 flex items-center gap-2 text-red-600 bg-red-50 p-3 rounded-lg">
-              <AlertCircle className="w-5 h-5" />
-              <span>{changeError}</span>
+            <div className="mb-4 text-red-600 bg-red-50 p-3 rounded-lg">
+              {changeError}
             </div>
           )}
           {changeMessage && (
@@ -204,57 +185,46 @@ const PostUploadPage = () => {
             </div>
           )}
 
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Title</label>
-            <input
-              type="text"
-              value={changeTitle}
-              onChange={(e) => setChangeTitle(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              required
-            />
+          <input
+            type="text"
+            placeholder="Title"
+            value={changeTitle}
+            onChange={(e) => setChangeTitle(e.target.value)}
+            className="w-full p-3 border rounded-lg mb-4"
+            required
+          />
+          <textarea
+            placeholder="Change Details"
+            value={changeContent}
+            onChange={(e) => setChangeContent(e.target.value)}
+            className="w-full p-3 border rounded-lg mb-4"
+            rows="4"
+            required
+          ></textarea>
+
+          <div className="flex gap-3 mb-4">
+            {["Low", "Medium", "High"].map((level) => (
+              <button
+                type="button"
+                key={level}
+                onClick={() => setUrgency(level)}
+                className={`flex-1 px-4 py-2 rounded-lg border font-medium transition ${
+                  urgency === level
+                    ? "bg-blue-600 text-white border-blue-600"
+                    : "bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200"
+                }`}
+              >
+                {level}
+              </button>
+            ))}
           </div>
 
-          <div className="mb-4">
-            <label className="block mb-1 font-medium">Change Details</label>
-            <textarea
-              value={changeContent}
-              onChange={(e) => setChangeContent(e.target.value)}
-              className="w-full p-3 border rounded-lg focus:ring-2 focus:ring-blue-500 outline-none"
-              rows="4"
-              required
-            ></textarea>
-          </div>
-
-          <div className="mb-4">
-            <label className="block mb-2 font-medium">Urgency</label>
-            <div className="flex gap-3">
-              {["Low", "Medium", "High"].map((level) => (
-                <button
-                  type="button"
-                  key={level}
-                  onClick={() => setUrgency(level)}
-                  className={`flex-1 px-4 py-2 rounded-lg border font-medium transition ${
-                    urgency === level
-                      ? "bg-blue-600 text-white border-blue-600"
-                      : "bg-gray-100 text-gray-700 border-gray-300 hover:bg-gray-200"
-                  }`}
-                >
-                  {level}
-                </button>
-              ))}
-            </div>
-          </div>
-
-          {/* Still allow file attachment for change requests */}
-          <div className="mb-6">
-            <label className="block mb-2 font-medium">Attach a File</label>
-            <input
-              type="file"
-              onChange={(e) => setFile(e.target.files[0])}
-              className="block w-full text-gray-600"
-            />
-          </div>
+          <input
+            type="file"
+            accept=".pdf,.png,.jpg,.jpeg"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="block w-full text-gray-600 mb-6"
+          />
 
           <button
             type="submit"

@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/logobanner.png";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
@@ -52,8 +52,7 @@ export default function Navbar() {
       <div className="container mx-auto px-6 lg:px-32 py-6 flex items-center justify-between">
         {/* Brand */}
         <Link to="/" className="flex items-center gap-3">
-          <img className="w-11 h-11 object-contain" src={logo} alt="School Logo" />
-          <span className="text-lg font-quicksand font-bold text-[#03499d] tracking-tight">Scoil Bhreac Chluain</span>
+          <img className="w-64 object-contain" src={logo} alt="School Logo" />
         </Link>
 
         {/* Desktop menu */}
