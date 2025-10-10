@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { useEffect } from "react";
+import crest from "../assets/crest_SBC.png";
 
 const LoginPage = () => {
   useEffect(() => {
@@ -42,6 +43,11 @@ const LoginPage = () => {
   return (
     <div className="min-h-screen flex items-center justify-center bg-gray-50">
       <form onSubmit={handleSubmit} className="bg-white p-8 rounded shadow-md w-full max-w-md">
+      <div className="flex justify-center mb-6">
+        <div className="backdrop-blur-md bg-white/70 rounded-3xl p-3 inline-block">
+          <img src={crest} className="h-28" />
+        </div>
+      </div>
         <h2 className="text-2xl text-center font-bold mb-6">SBC Admin Login</h2>
         {error && <div className="mb-4 text-red-500">{error}</div>}
         <div className="mb-4">
