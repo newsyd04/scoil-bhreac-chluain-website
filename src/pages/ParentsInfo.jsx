@@ -160,8 +160,17 @@ const ParentsInfo = () => {
           {/* TOC */}
           <aside className="lg:col-span-3">
             <details className="lg:hidden rounded-lg border border-gray-200">
-              <summary className="cursor-pointer select-none px-4 py-3 font-semibold">
-                On this page
+              <summary className="cursor-pointer select-none px-4 py-3 font-semibold flex items-center justify-between text-gray-900">
+                <span>On this page</span>
+                <svg
+                  className="w-4 h-4 transform transition-transform duration-200"
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                >
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                </svg>
               </summary>
               <nav className="px-4 pb-4">
                 <ul className="space-y-2">
@@ -175,6 +184,8 @@ const ParentsInfo = () => {
                 </ul>
               </nav>
             </details>
+
+            {/* Desktop TOC */}
             <nav className="hidden lg:block sticky top-24">
               <p className="text-sm font-semibold text-gray-900 mb-3">On this page</p>
               <ul className="space-y-2">
@@ -188,6 +199,7 @@ const ParentsInfo = () => {
               </ul>
             </nav>
           </aside>
+
 
           {/* Content */}
           <article className="lg:col-span-9">
