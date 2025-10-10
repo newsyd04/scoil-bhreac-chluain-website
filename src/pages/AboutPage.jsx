@@ -2,6 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import PageBackground from "../components/PageBackground";
 import shapesimg from '../assets/blobs.png';
+import crest from "../assets/crest_SBC.png";
 
 const AboutPage = () => {
 
@@ -64,10 +65,12 @@ const AboutPage = () => {
         <img src={shapesimg} className='absolute inset-0 w-full h-full object-cover saturate-[1] z-0' />
 
       <div className="min-h-screen px-4 flex flex-col items-center z-20 relative shadow-2xl shadow-black/30">
-        
         {/* About Section */}
         <section className="w-full max-w-6xl p-8 bg-white rounded-2xl shadow-lg my-12">
           <header className="text-center mb-8">
+            <div className="backdrop-blur-md inline-block bg-white/70 rounded-3xl p-3">
+              <img src={crest} className="h-44" />
+            </div>
             <h2 className="text-4xl font-extrabold text-gray-900 mb-2">About Us</h2>
             <p className="text-gray-500 text-lg">
               Welcome to Scoil Bhreac Chluain, a vibrant school dedicated to fostering excellence in education and community values.

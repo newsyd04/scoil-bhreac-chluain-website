@@ -1,16 +1,20 @@
 import React from "react";
 import { useEffect } from "react";
+import crest from "../assets/crest_SBC.png";
 
 const ContactPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center px-4">
+    <div className="min-h-screen bg-gray-50 flex flex-col items-center justify-center p-6">
       {/* Contact Section */}
       <section className="w-full max-w-4xl p-8 bg-white rounded-2xl shadow-lg">
         {/* Title */}
         <header className="text-center mb-8">
+          <div className="backdrop-blur-md inline-block bg-white/70 rounded-3xl p-3">
+            <img src={crest} className="h-44" />
+          </div>
           <h2 className="text-4xl font-extrabold text-gray-900 mb-2">
             Contact Us
           </h2>

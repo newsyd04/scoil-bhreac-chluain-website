@@ -7,6 +7,7 @@ import Calendar from "react-calendar";
 import shapesbg from "../assets/shapes-bg.png";
 import "react-calendar/dist/Calendar.css";
 import fallback from "../assets/fallback.jpg";
+import crest from "../assets/crest_SBC.png";
 
 const API_BASE = "https://webdev-backends.onrender.com";
 
@@ -214,7 +215,10 @@ const HomePage = () => {
           className="absolute top-0 left-0 w-full h-full md:h-[120%] object-cover saturate-[0.86] -z-10 hidden sm:block"
         />
 
-        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-lg sm:rounded-xl py-8 sm:py-10 md:py-14 px-5 sm:px-8 shadow-lg">
+        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-lg sm:rounded-xl py-8 sm:py-10 md:py-14 px-5 sm:px-8 shadow-lg flex flex-col items-center gap-6">
+          <div className="backdrop-blur-md bg-white/70 rounded-3xl p-3">
+            <img src={crest} className="h-44" />
+          </div>
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white font-sketch leading-snug">
             Welcome to Scoil Bhreac Chluain!
           </h2>
