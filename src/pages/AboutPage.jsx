@@ -28,7 +28,7 @@ const AboutPage = () => {
       image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
     {
-      name: "Mary Falvey, Mairead Flahive, Róisín O' Connor, Mary Sayers, Edwina Knightly, Ciara Murphy",
+      name: "Mary Falvey, Mairead Flahive, Róisín O' Connor, Mary Sayers, Edwina Knightly",
       title: "SNA Team",
       image: "https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F036%2F280%2F651%2Foriginal%2Fdefault-avatar-profile-icon-social-media-user-image-gray-avatar-icon-blank-profile-silhouette-illustration-vector.jpg&f=1&nofb=1&ipt=968804e089275771be11c2179112c076746df85d36cd6bfbace9f38a6d59364f",
     },
