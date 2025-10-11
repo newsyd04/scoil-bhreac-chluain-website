@@ -2,7 +2,7 @@ import React from "react";
 import { useEffect } from "react";
 import PageBackground from "../components/PageBackground";
 import shapesimg from '../assets/blobs.png';
-import crest from "../assets/crest_SBC.png";
+import crest from "../assets/crest_SBC.svg";
 
 const AboutPage = () => {
 

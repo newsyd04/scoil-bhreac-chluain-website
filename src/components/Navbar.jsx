@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logobanner.png";
+import logo from "../assets/logo_SBC.svg";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {

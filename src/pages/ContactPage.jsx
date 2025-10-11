@@ -1,6 +1,6 @@
 import React from "react";
 import { useEffect } from "react";
-import crest from "../assets/crest_SBC.png";
+import crest from "../assets/crest_SBC.svg";
 
 const ContactPage = () => {
   useEffect(() => {

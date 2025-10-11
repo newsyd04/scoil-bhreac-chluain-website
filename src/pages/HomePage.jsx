@@ -7,7 +7,7 @@ import Calendar from "react-calendar";
 import shapesbg from "../assets/shapes-bg.png";
 import "react-calendar/dist/Calendar.css";
 import fallback from "../assets/fallback.jpg";
-import crest from "../assets/crest_SBC.png";
+import crest from "../assets/crest_SBC.svg";
 
 const API_BASE = "https://webdev-backends.onrender.com";
 
@@ -160,7 +160,7 @@ const HomePage = () => {
           </div>
 
           {/* Wave SVG */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+          <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-0">
             <svg
               className="relative block w-full h-20 md:h-32 text-blue-900"
               xmlns="http://www.w3.org/2000/svg"
@@ -207,26 +207,32 @@ const HomePage = () => {
       </section>
 
       {/* ================= Welcome Box ================= */}
-      <section className="relative z-20 -mt-12 sm:-mt-16 md:-mt-24 py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
-        {/* shapes background - hidden on mobile */}
+      <section className="relative z-20 -mt-10 sm:-mt-16 md:-mt-24 py-10 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+        {/* background shapes (hidden on mobile) */}
         <img
           src={shapesbg}
           alt=""
           className="absolute top-0 left-0 w-full h-full md:h-[120%] object-cover saturate-[0.86] -z-10 hidden sm:block"
         />
 
-        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-lg sm:rounded-xl py-8 sm:py-10 md:py-14 px-5 sm:px-8 shadow-lg flex flex-col items-center gap-6">
-          <div className="backdrop-blur-md bg-white/70 rounded-3xl p-3">
-            <img src={crest} className="h-44" />
+        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
+          
+          {/* Crest + Title */}
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-center">
+            <div className="rounded-3xl p-2 sm:p-3">
+              <img src={crest} className="h-28 sm:h-40 md:h-44" alt="School Crest" />
+            </div>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-quicksand font-normal sm:font-normal md:font-normal text-center sm:text-left text-[#F9F8F4] leading-tight tracking-wide">
+              Scoil <br className="hidden sm:block" />Bhreac Chluain
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#F9F8F4] font-sketch leading-snug">
-            Welcome to Scoil Bhreac Chluain!
-          </h2>
-          <p className="mt-5 text-base sm:text-lg md:text-xl leading-relaxed text-white/90">
-            At Scoil Bhreac Chluain, we are dedicated to providing a nurturing and
-            inclusive environment where every child can thrive.
-            We believe in the importance of community and work closely with parents to
-            ensure the best outcomes for our pupils.
+
+          {/* Description */}
+          <p className="max-w-2xl mt-2 sm:mt-4 text-base sm:text-lg md:text-xl font-light leading-relaxed text-white/90">
+            At <span className="text-[#fefae0] font-medium">Scoil Bhreac Chluain</span>, we are dedicated to providing a nurturing and
+            inclusive environment where every child can thrive. We believe in the
+            importance of community and work closely with parents to ensure the best
+            outcomes for our pupils.
           </p>
         </div>
       </section>
