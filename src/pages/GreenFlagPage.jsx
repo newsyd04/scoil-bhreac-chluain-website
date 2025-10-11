@@ -9,7 +9,7 @@ const GreenFlagPage = () => {
   }, []);
 
   return (
-    <div className="relative min-h-screen w-full">
+    <div className="relative bg-[#F9F8F4] min-h-screen w-full">
         <img src={naturebg} className='absolute inset-0 w-full h-full object-cover saturate-[1] z-0' />
       
         <div className="min-h-screen px-4 flex flex-col items-center z-20 relative shadow-2xl shadow-black/30">

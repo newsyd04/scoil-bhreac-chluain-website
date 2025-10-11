@@ -47,7 +47,7 @@ const Latest = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-[#F9F8F4] py-12 px-4">
       <div className="max-w-4xl mx-auto">
         <header className="mb-8">
           <h1 className="text-4xl font-extrabold text-gray-900 mb-4">

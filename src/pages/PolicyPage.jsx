@@ -3,7 +3,7 @@ import { FileText } from 'lucide-react'; // install lucide-react or use any icon
 import shapesbg from '../assets/shapes-bg.png';
 
 const PolicyPage = () => (
-  <div className="min-h-screen w-full">
+  <div className="min-h-screen bg-[#F9F8F4] w-full">
     {/* ================= Page Heading ================= */}
     <section className="relative flex items-center justify-center min-h-[40vh] sm:min-h-[50vh] px-4 overflow-hidden shadow-black/30">
       
@@ -11,7 +11,7 @@ const PolicyPage = () => (
       <img
         src={shapesbg}
         alt=""
-        className="absolute inset-0 w-full h-full object-cover saturate-[0.86] -z-10"
+        className="absolute inset-0 w-full bg-[#F9F8F4] h-full object-cover  z-1"
       />
 
       {/* Overlay box */}

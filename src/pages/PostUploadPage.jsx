@@ -102,7 +102,7 @@ const PostUploadPage = () => {
   };
 
   return (
-    <div className="min-h-screen bg-gray-50 px-6 py-10">
+    <div className="min-h-screen bg-[#F9F8F4] px-6 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
         {/* Post Upload Form */}
         <form

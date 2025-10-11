@@ -8,7 +8,7 @@ const Footer = () => {
   const year = new Date().getFullYear();
 
   return (
-    <footer className="border-t border-gray-200 bg-white" aria-labelledby="footer-heading">
+    <footer className="border-t border-gray-200 bg-[#F9F8F4]" aria-labelledby="footer-heading">
       {/* subtle top accent */}
       <div className="h-1 bg-gradient-to-r from-blue-600 via-blue-500 to-blue-600" />
 

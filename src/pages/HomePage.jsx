@@ -135,7 +135,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-[#F9F8F4] text-gray-900">
       {/* ================= Hero ================= */}
       <section aria-label="School highlights" className="relative isolate">
         <div className="relative w-full bg-gray-900">
@@ -168,7 +168,7 @@ const HomePage = () => {
               viewBox="0 0 1440 320"
             >
               <path
-                fill="white"
+                fill="#F9F8F4"
                 d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,202.7C960,213,1056,171,1152,138.7C1248,107,1344,85,1392,74.7L1440,64V320H0Z"
               />
             </svg>
@@ -179,7 +179,7 @@ const HomePage = () => {
             <div className="mx-auto w-full max-w-6xl px-4">
               <div className="max-w-2xl">
                 <div className="rounded-2xl bg-black/35 backdrop-blur-sm p-4 md:bg-transparent md:backdrop-blur-0 md:p-0">
-                  <h1 className="text-[clamp(1.75rem,6vw,2.75rem)] md:text-5xl font-extrabold font-sketch text-white leading-[1.1] tracking-tight">
+                  <h1 className="text-[clamp(1.75rem,6vw,2.75rem)] md:text-5xl font-extrabold font-sketch text-[#F9F8F4] leading-[1.1] tracking-tight">
                     {slides[idx].headline}
                   </h1>
                   <p className="mt-2 md:mt-4 text-[clamp(0.95rem,3.6vw,1.125rem)] text-white/90">
@@ -188,7 +188,7 @@ const HomePage = () => {
                   <div className="mt-5 flex flex-col sm:flex-row gap-3">
                     <a
                       href="./about-us"
-                      className="inline-flex justify-center rounded-full px-6 py-3 bg-white text-sbc-blue font-semibold shadow hover:shadow-md transition"
+                      className="inline-flex justify-center rounded-full px-6 py-3 bg-[#F9F8F4] text-sbc-blue font-semibold shadow hover:shadow-md transition"
                     >
                       Learn About Us
                     </a>
@@ -219,7 +219,7 @@ const HomePage = () => {
           <div className="backdrop-blur-md bg-white/70 rounded-3xl p-3">
             <img src={crest} className="h-44" />
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white font-sketch leading-snug">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-[#F9F8F4] font-sketch leading-snug">
             Welcome to Scoil Bhreac Chluain!
           </h2>
           <p className="mt-5 text-base sm:text-lg md:text-xl leading-relaxed text-white/90">
@@ -232,7 +232,7 @@ const HomePage = () => {
       </section>
 
       {/* ================= News + Calendar ================= */}
-      <section className="z-0 relative py-12 md:py-16 bg-gray-50">
+      <section className="z-0 relative py-12 md:py-16 bg-gray-100">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Latest News */}
@@ -357,7 +357,7 @@ const HomePage = () => {
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-block bg-white text-sbc-blue px-8 py-4 rounded-full text-lg font-semibold shadow hover:shadow-md transition"
+            className="mt-6 inline-block bg-[#F9F8F4] text-sbc-blue px-8 py-4 rounded-full text-lg font-semibold shadow hover:shadow-md transition"
           >
             Contact Us Today
           </Link>
