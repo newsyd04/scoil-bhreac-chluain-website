@@ -7,7 +7,6 @@ import ContactPage from "./pages/ContactPage";
 import AboutPage from "./pages/AboutPage";
 import LatestPage from "./pages/LatestPage";
 import ParentsInfo from "./pages/ParentsInfo";
-import CommunicationsPolicyPage from "./pages/CommunicationsPolicyPage";
 import LoginPage from "./pages/LoginPage";
 import PostUploadPage from "./pages/PostUploadPage";
 import PrivateRoute from "./pages/PrivateRoute";
@@ -25,7 +24,6 @@ function App() {
         <Route path="/contact" element={<ContactPage />} />
         <Route path="/about-us" element={<AboutPage />} />
         <Route path="/parents-information" element={<ParentsInfo />} />
-        <Route path="/communications-policy" element={<CommunicationsPolicyPage />} />
         <Route path="/latest" element={<LatestPage />} />
         <Route path="/login" element={<LoginPage />} />
         <Route path="/green-flag" element={<GreenFlagPage />} />

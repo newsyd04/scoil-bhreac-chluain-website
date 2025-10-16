@@ -26,7 +26,7 @@ const PostDetail = () => {
   if (!post) return <p className="text-gray-600">Loading...</p>;
 
   return (
-    <div className="min-h-screen bg-gray-50 py-12 px-4">
+    <div className="min-h-screen bg-[#F9F8F4] py-12 px-4">
       <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
         {post.imageUrl && (
           <div className="mb-6">

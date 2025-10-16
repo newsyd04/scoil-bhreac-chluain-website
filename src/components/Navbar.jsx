@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/logobanner.png";
+import logo from "../assets/logo_SBC.svg";
 import { PhoneIcon, EnvelopeIcon } from "@heroicons/react/24/solid";
 
 export default function Navbar() {
@@ -20,9 +20,9 @@ export default function Navbar() {
   );
 
   return (
-    <nav className="bg-white sticky top-0 z-50 text-sbc-blue shadow-2xl">
+    <nav className="bg-[#F9F8F4] sticky top-0 z-50 text-sbc-blue shadow-2xl">
 
-      <div className="bg-blue-800 h-9 w-full text-white text-sm">
+      <div className="bg-blue-800 h-9 w-full text-[#F9F8F4] text-sm">
         <div className="container mx-auto h-full flex items-center justify-between px-4 sm:px-6 lg:px-32">
           {/* Contact Info */}
           <div className="flex text-xs items-center gap-6">

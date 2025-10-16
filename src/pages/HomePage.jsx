@@ -7,7 +7,7 @@ import Calendar from "react-calendar";
 import shapesbg from "../assets/shapes-bg.png";
 import "react-calendar/dist/Calendar.css";
 import fallback from "../assets/fallback.jpg";
-import crest from "../assets/crest_SBC.png";
+import crest from "../assets/crest_SBC.svg";
 
 const API_BASE = "https://webdev-backends.onrender.com";
 
@@ -135,7 +135,7 @@ const HomePage = () => {
   }, []);
 
   return (
-    <main className="min-h-screen bg-white text-gray-900">
+    <main className="min-h-screen bg-[#F9F8F4] text-gray-900">
       {/* ================= Hero ================= */}
       <section aria-label="School highlights" className="relative isolate">
         <div className="relative w-full bg-gray-900">
@@ -160,7 +160,7 @@ const HomePage = () => {
           </div>
 
           {/* Wave SVG */}
-          <div className="absolute bottom-0 left-0 w-full overflow-hidden leading-none z-0">
+          <div className="absolute bottom-[-1px] left-0 w-full overflow-hidden leading-none z-0">
             <svg
               className="relative block w-full h-20 md:h-32 text-blue-900"
               xmlns="http://www.w3.org/2000/svg"
@@ -168,7 +168,7 @@ const HomePage = () => {
               viewBox="0 0 1440 320"
             >
               <path
-                fill="white"
+                fill="#F9F8F4"
                 d="M0,160L48,176C96,192,192,224,288,208C384,192,480,128,576,128C672,128,768,192,864,202.7C960,213,1056,171,1152,138.7C1248,107,1344,85,1392,74.7L1440,64V320H0Z"
               />
             </svg>
@@ -179,7 +179,7 @@ const HomePage = () => {
             <div className="mx-auto w-full max-w-6xl px-4">
               <div className="max-w-2xl">
                 <div className="rounded-2xl bg-black/35 backdrop-blur-sm p-4 md:bg-transparent md:backdrop-blur-0 md:p-0">
-                  <h1 className="text-[clamp(1.75rem,6vw,2.75rem)] md:text-5xl font-extrabold font-sketch text-white leading-[1.1] tracking-tight">
+                  <h1 className="text-[clamp(1.75rem,6vw,2.75rem)] md:text-5xl font-extrabold font-sketch text-[#F9F8F4] leading-[1.1] tracking-tight">
                     {slides[idx].headline}
                   </h1>
                   <p className="mt-2 md:mt-4 text-[clamp(0.95rem,3.6vw,1.125rem)] text-white/90">
@@ -188,7 +188,7 @@ const HomePage = () => {
                   <div className="mt-5 flex flex-col sm:flex-row gap-3">
                     <a
                       href="./about-us"
-                      className="inline-flex justify-center rounded-full px-6 py-3 bg-white text-sbc-blue font-semibold shadow hover:shadow-md transition"
+                      className="inline-flex justify-center rounded-full px-6 py-3 bg-[#F9F8F4] text-sbc-blue font-semibold shadow hover:shadow-md transition"
                     >
                       Learn About Us
                     </a>
@@ -207,32 +207,38 @@ const HomePage = () => {
       </section>
 
       {/* ================= Welcome Box ================= */}
-      <section className="relative z-20 -mt-12 sm:-mt-16 md:-mt-24 py-14 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
-        {/* shapes background - hidden on mobile */}
+      <section className="relative z-20 -mt-10 sm:-mt-16 md:-mt-24 py-10 sm:py-16 md:py-20 px-4 sm:px-6 overflow-hidden">
+        {/* background shapes (hidden on mobile) */}
         <img
           src={shapesbg}
           alt=""
           className="absolute top-0 left-0 w-full h-full md:h-[120%] object-cover saturate-[0.86] -z-10 hidden sm:block"
         />
 
-        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-lg sm:rounded-xl py-8 sm:py-10 md:py-14 px-5 sm:px-8 shadow-lg flex flex-col items-center gap-6">
-          <div className="backdrop-blur-md bg-white/70 rounded-3xl p-3">
-            <img src={crest} className="h-44" />
+        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
+          
+          {/* Crest + Title */}
+          <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-center">
+            <div className="rounded-3xl p-2 sm:p-3">
+              <img src={crest} className="h-28 sm:h-40 md:h-44" alt="School Crest" />
+            </div>
+            <h2 className="text-3xl sm:text-5xl md:text-6xl font-quicksand font-normal sm:font-normal md:font-normal text-center sm:text-left text-[#F9F8F4] leading-tight tracking-wide">
+              Scoil <br className="hidden sm:block" />Bhreac Chluain
+            </h2>
           </div>
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white font-sketch leading-snug">
-            Welcome to Scoil Bhreac Chluain!
-          </h2>
-          <p className="mt-5 text-base sm:text-lg md:text-xl leading-relaxed text-white/90">
-            At Scoil Bhreac Chluain, we are dedicated to providing a nurturing and
-            inclusive environment where every child can thrive.
-            We believe in the importance of community and work closely with parents to
-            ensure the best outcomes for our pupils.
+
+          {/* Description */}
+          <p className="max-w-2xl mt-2 sm:mt-4 text-base sm:text-lg md:text-xl font-light leading-relaxed text-white/90">
+            At <span className="text-[#fefae0] font-medium">Scoil Bhreac Chluain</span>, we are dedicated to providing a nurturing and
+            inclusive environment where every child can thrive. We believe in the
+            importance of community and work closely with parents to ensure the best
+            outcomes for our pupils.
           </p>
         </div>
       </section>
 
       {/* ================= News + Calendar ================= */}
-      <section className="z-0 relative py-12 md:py-16 bg-gray-50">
+      <section className="z-0 relative py-12 md:py-16 bg-gray-100">
         <div className="mx-auto max-w-6xl px-4">
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {/* Latest News */}
@@ -357,7 +363,7 @@ const HomePage = () => {
           </p>
           <Link
             to="/contact"
-            className="mt-6 inline-block bg-white text-sbc-blue px-8 py-4 rounded-full text-lg font-semibold shadow hover:shadow-md transition"
+            className="mt-6 inline-block bg-[#F9F8F4] text-sbc-blue px-8 py-4 rounded-full text-lg font-semibold shadow hover:shadow-md transition"
           >
             Contact Us Today
           </Link>
