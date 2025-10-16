@@ -28,26 +28,26 @@ const PolicyPage = () => (
         
         {/* Policy Card */}
         <a 
-          href="/policies/Code-of-Behaviour-and-Anti-Bullying-Policy.pdf"
+          href="/policies/Bí Cineálta Policy.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-400 transition"
         >
           <FileText className="w-10 h-10 text-blue-600 mb-4 group-hover:text-blue-800 transition" />
           <span className="text-lg font-semibold text-gray-900 text-center leading-snug">
-            Code of Behaviour & Anti-Bullying Policy
+            Bi Cineálta Policy
           </span>
         </a>
 
         <a 
-          href="/policies/policy2.pdf"
+          href="/policies/Admission Policy of Scoil Bhreac chluain.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="group flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-400 transition"
         >
           <FileText className="w-10 h-10 text-blue-600 mb-4 group-hover:text-blue-800 transition" />
           <span className="text-lg font-semibold text-gray-900 text-center leading-snug">
-            Enrolment Policy
+            Admissions Policy
           </span>
         </a>
 

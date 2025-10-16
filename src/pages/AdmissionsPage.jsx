@@ -10,7 +10,6 @@ const AdmissionsPage = () => {
     <div className="min-h-screen w-full">
       {/* ================= Page Heading ================= */}
       <section className="relative flex items-center justify-center min-h-[40vh] sm:min-h-[50vh] px-4 overflow-hidden shadow-black/30">
-        
         {/* Shapes background */}
         <img
           src={shapesbg}
@@ -32,7 +31,7 @@ const AdmissionsPage = () => {
           
           {/* Policy Card */}
           <a 
-            href="/admissions/Admission-Application-Form.pdf"
+            href="/admissions/Admission Application Form.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-400 transition"
@@ -44,14 +43,14 @@ const AdmissionsPage = () => {
           </a>
 
           <a 
-            href="/admissions/Annual-Admissions-Notice-2024-2025.pdf"
+            href="/admissions/Annual Admission Notice 2026 2027.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="group flex flex-col items-center justify-center p-8 bg-white rounded-2xl shadow-md hover:shadow-xl border border-gray-200 hover:border-blue-400 transition"
           >
             <FileText className="w-10 h-10 text-blue-600 mb-4 group-hover:text-blue-800 transition" />
             <span className="text-lg font-semibold text-gray-900 text-center leading-snug">
-              Annual Admissions Notice 2024-2025
+              Annual Admissions Notice 2026-2027
             </span>
           </a>
 
