@@ -3,7 +3,7 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-  "homepage": "https://newsyd04.github.io/scoil-bhreac-chluain-website/",
+  "homepage": "https://scoilbhreacchluain.ie/",
   "scripts": {
     "dev": "vite",
     "build": "vite build",
