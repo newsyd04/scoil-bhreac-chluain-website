@@ -3,6 +3,7 @@ import { FileText, AlertCircle } from "lucide-react";
 import lmsImg from "/lms.png";
 import eventImg from "/event.jpg";
 import announcementImg from "/announcement.jpg";
+import newsletterImg from "/newsletter.png";
 
 const PostUploadPage = () => {
   const [title, setTitle] = useState("");
@@ -18,7 +19,7 @@ const PostUploadPage = () => {
   const [changeMessage, setChangeMessage] = useState("");
   const [changeError, setChangeError] = useState("");
 
-  const stockImages = [lmsImg, eventImg, announcementImg];
+  const stockImages = [lmsImg, eventImg, announcementImg, newsletterImg];
   const [selectedImage, setSelectedImage] = useState("");
 
   const baseUrl = "https://webdev-backends.onrender.com";
@@ -131,7 +132,7 @@ const PostUploadPage = () => {
           ></textarea>
           <input
             type="text"
-            placeholder="Type (e.g. Event, Announcement)"
+            placeholder="Type (e.g. Event, Announcement, Newsletter)"
             value={type}
             onChange={(e) => setType(e.target.value)}
             className="w-full p-3 border rounded-lg mb-6"
