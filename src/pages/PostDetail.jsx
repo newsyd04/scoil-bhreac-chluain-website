@@ -1,10 +1,11 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link } from "react-router-dom";
+import { Download } from "lucide-react";
 
 const baseUrl = "https://webdev-backends.onrender.com";
 
 const PostDetail = () => {
-  const { id } = useParams(); // get post id from route
+  const { id } = useParams();
   const [post, setPost] = useState(null);
   const [error, setError] = useState("");
 
@@ -22,12 +23,13 @@ const PostDetail = () => {
     fetchPost();
   }, [id]);
 
-  if (error) return <p className="text-red-600">{error}</p>;
-  if (!post) return <p className="text-gray-600">Loading...</p>;
+  if (error) return <p className="text-red-600 text-center mt-10">{error}</p>;
+  if (!post) return <p className="text-gray-600 text-center mt-10">Loading...</p>;
 
   return (
     <div className="min-h-screen bg-[#F9F8F4] py-12 px-4">
       <div className="max-w-3xl mx-auto bg-white p-6 rounded-lg shadow-md">
+        {/* Image (if available) */}
         {post.imageUrl && (
           <div className="mb-6">
             <img
@@ -37,13 +39,38 @@ const PostDetail = () => {
             />
           </div>
         )}
+
+        {/* Title + Meta */}
         <h1 className="text-3xl font-bold mb-2">{post.title}</h1>
         <p className="text-sm text-gray-500 mb-4">
           {new Date(post.createdAt).toLocaleDateString()} · {post.type}
         </p>
-        <p className="text-gray-800 leading-relaxed whitespace-pre-line">
+
+        {/* Content */}
+        <p className="text-gray-800 leading-relaxed whitespace-pre-line mb-6">
           {post.content}
         </p>
+
+        {/* File download section (only if a file was uploaded) */}
+        {post.fileUrl && (
+          <div className="flex items-center gap-3 bg-blue-50 border border-blue-200 p-4 rounded-lg mb-6">
+            <Download className="w-5 h-5 text-blue-600" />
+            <a
+              href={
+                post.fileUrl.startsWith("http")
+                  ? post.fileUrl
+                  : `${baseUrl}/school/uploads/${post.fileUrl}`
+              }
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-blue-700 font-medium hover:underline"
+            >
+              Download Attached File
+            </a>
+          </div>
+        )}
+
+        {/* Back link */}
         <div className="mt-6">
           <Link
             to="/latest"

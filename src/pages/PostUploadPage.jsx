@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { FileText, AlertCircle } from "lucide-react";
+import { FileText } from "lucide-react";
 import lmsImg from "/lms.png";
 import eventImg from "/event.jpg";
 import announcementImg from "/announcement.jpg";
@@ -11,11 +11,12 @@ const PostUploadPage = () => {
   const [type, setType] = useState("");
   const [message, setMessage] = useState("");
   const [error, setError] = useState("");
+  const [file, setFile] = useState(null);
 
   const [changeTitle, setChangeTitle] = useState("");
   const [changeContent, setChangeContent] = useState("");
   const [urgency, setUrgency] = useState("Medium");
-  const [file, setFile] = useState(null);
+  const [changeFile, setChangeFile] = useState(null);
   const [changeMessage, setChangeMessage] = useState("");
   const [changeError, setChangeError] = useState("");
 
@@ -24,7 +25,7 @@ const PostUploadPage = () => {
 
   const baseUrl = "https://webdev-backends.onrender.com";
 
-  // Create Post
+  // ==================== CREATE POST ====================
   const handlePostSubmit = async (e) => {
     e.preventDefault();
     setError("");
@@ -37,18 +38,17 @@ const PostUploadPage = () => {
     }
 
     try {
+      const formData = new FormData();
+      formData.append("title", title);
+      formData.append("content", content);
+      formData.append("type", type);
+      if (selectedImage) formData.append("imageUrl", selectedImage);
+      if (file) formData.append("file", file); // 👈 add file to formData
+
       const response = await fetch(`${baseUrl}/school/posts`, {
         method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify({
-          title,
-          content,
-          type,
-          imageUrl: selectedImage || null,
-        }),
+        headers: { Authorization: token },
+        body: formData,
       });
 
       const data = await response.json();
@@ -58,6 +58,7 @@ const PostUploadPage = () => {
         setContent("");
         setType("");
         setSelectedImage("");
+        setFile(null);
       } else {
         setError(data.message || "Failed to create post");
       }
@@ -67,7 +68,7 @@ const PostUploadPage = () => {
     }
   };
 
-  // Submit Change Request (with free file upload)
+  // ==================== SUBMIT CHANGE REQUEST ====================
   const handleChangeSubmit = async (e) => {
     e.preventDefault();
     setChangeError("");
@@ -77,7 +78,7 @@ const PostUploadPage = () => {
     formData.append("title", changeTitle);
     formData.append("change_details", changeContent);
     formData.append("urgency", urgency);
-    if (file) formData.append("file", file);
+    if (changeFile) formData.append("file", changeFile);
 
     try {
       const response = await fetch(`${baseUrl}/school/change-request`, {
@@ -86,13 +87,12 @@ const PostUploadPage = () => {
       });
 
       const data = await response.json();
-
       if (data.success) {
         setChangeMessage("Change request sent successfully ✅");
         setChangeTitle("");
         setChangeContent("");
         setUrgency("Medium");
-        setFile(null);
+        setChangeFile(null);
       } else {
         setChangeError(data.message || "Failed to send change request ❌");
       }
@@ -105,7 +105,7 @@ const PostUploadPage = () => {
   return (
     <div className="min-h-screen bg-[#F9F8F4] px-6 py-10">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-        {/* Post Upload Form */}
+        {/* ==================== POST UPLOAD FORM ==================== */}
         <form
           onSubmit={handlePostSubmit}
           className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -155,6 +155,17 @@ const PostUploadPage = () => {
             ))}
           </div>
 
+          {/* File Upload */}
+          <label className="block text-gray-700 mb-2 font-medium">
+            Attach File (optional)
+          </label>
+          <input
+            type="file"
+            accept=".pdf,.png,.jpg,.jpeg,.docx"
+            onChange={(e) => setFile(e.target.files[0])}
+            className="block w-full text-gray-600 mb-6"
+          />
+
           <button
             type="submit"
             className="w-full bg-blue-600 text-white font-semibold p-3 rounded-lg hover:bg-blue-700 transition"
@@ -163,7 +174,7 @@ const PostUploadPage = () => {
           </button>
         </form>
 
-        {/* Change Request Form */}
+        {/* ==================== CHANGE REQUEST FORM ==================== */}
         <form
           onSubmit={handleChangeSubmit}
           className="bg-white p-8 rounded-xl shadow-lg border border-gray-200"
@@ -220,10 +231,13 @@ const PostUploadPage = () => {
             ))}
           </div>
 
+          <label className="block text-gray-700 mb-2 font-medium">
+            Attach Supporting File (optional)
+          </label>
           <input
             type="file"
             accept=".pdf,.png,.jpg,.jpeg"
-            onChange={(e) => setFile(e.target.files[0])}
+            onChange={(e) => setChangeFile(e.target.files[0])}
             className="block w-full text-gray-600 mb-6"
           />
 
