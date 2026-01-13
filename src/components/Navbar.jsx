@@ -60,7 +60,8 @@ export default function Navbar() {
           <div className="flex items-center font-quicksand text-center gap-3 text-md font-semibold">
             <NavLink to="/" label="Home" />
             <NavLink to="/about-us" label="About" />
-            <NavLink to="/green-flag" label="Green Flag" />
+            {/* <NavLink to="/green-flag" label="Green Flag" /> */}
+            <NavLink to="/last-man-standing" label="Last Man Standing" />
             <NavLink to="/policies" label="Policies" /> 
            <NavLink to="/admissions" label="Admissions" />
             <NavLink to="/latest" label="Latest" />
@@ -114,9 +115,14 @@ export default function Navbar() {
                 About
               </Link>
             </li>
-            <li>
+            {/* <li>
               <Link to="/green-flag" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
                 Green Flag
+              </Link>
+            </li> */}
+            <li>
+              <Link to="/last-man-standing" className="block px-4 py-3 hover:bg-white/10 rounded-xl mx-2 transition">
+                Last Man Standing
               </Link>
             </li>
             <li>

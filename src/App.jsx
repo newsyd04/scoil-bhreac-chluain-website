@@ -14,6 +14,7 @@ import GreenFlagPage from "./pages/GreenFlagPage";
 import PolicyPage from "./pages/PolicyPage";
 import AdmissionsPage from "./pages/AdmissionsPage";
 import PostDetail from "./pages/PostDetail";
+import LastManStandingPage from "./pages/LastManStandingPage";
 
 function App() {
   return (
@@ -30,6 +31,7 @@ function App() {
         <Route path="/policies" element={<PolicyPage />} />
         <Route path="/admissions" element={<AdmissionsPage />} />
         <Route path="/post/:id" element={<PostDetail />} />
+        <Route path="/last-man-standing" element={<LastManStandingPage />} />
         <Route
           path="/post-upload"
           element={
