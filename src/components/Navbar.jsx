@@ -34,11 +34,11 @@ export default function Navbar() {
               066 915 7436
             </a>
             <a
-              href="mailto:s​coilbhreacchluain@gmail.com"
+              href="mailto:info@scoilbhreacchluain.ie"
               className="flex font-semibold items-center gap-1 hover:underline"
             >
               <EnvelopeIcon className="h-4 w-4" />
-              s​coilbhreacchluain@gmail.com
+              info@scoilbhreacchluain.ie
             </a>
           </div>
 
