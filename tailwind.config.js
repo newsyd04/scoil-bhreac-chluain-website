@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       colors: {
         'sbc-blue': '#092145',
-        'sbc-yellow': '#f3c744',
+        'sbc-yellow': '#F5AB00',
       },
       fontFamily: {
         sketch: ['"Cabin Sketch"', 'cursive'],

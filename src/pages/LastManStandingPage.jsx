@@ -208,10 +208,22 @@ const LastManStanding = () => {
         <section className="space-y-6">
           <article className="bg-white p-6 rounded-lg shadow">
             <h2 className="text-2xl font-bold mb-2 text-gray-900">How it works</h2>
-            <p className="text-gray-700">
-              Each round, pick <span className="font-semibold">one team</span> playing that week to win.
-              Win and you go through; <span className="font-semibold">lose or draw</span> and you’re out.
-              You can’t pick the same team twice.
+            <p className="text-gray-700 leading-relaxed">
+              Each round, pick <span className="font-semibold">one team</span> playing that week to win. If your team
+              wins, you survive to the next round. If they <span className="font-semibold">lose or draw</span>, you’re
+              out. You can’t pick the same team twice, so choose wisely.
+            </p>
+          </article>
+          
+          <article className="mt-5 bg-white rounded-lg shadow p-5">
+            <p className="font-semibold text-gray-900 mb-1">How to enter</p>
+            <ol className="list-decimal pl-5 text-gray-700 space-y-1">
+              <li>Fill in the Google Form with your details + team selections.</li>
+              <li>Pay the €10 entry fee using the Aladdin payment link.</li>
+              <li>That’s it, you’re in!</li>
+            </ol>
+            <p className="text-sm text-gray-600 mt-3">
+              If you’ve paid but haven’t filled the form (or vice versa), your entry may be incomplete.
             </p>
           </article>
 

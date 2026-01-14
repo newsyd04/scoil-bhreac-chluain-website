@@ -215,8 +215,7 @@ const HomePage = () => {
           className="absolute top-0 left-0 w-full h-full md:h-[120%] object-cover saturate-[0.86] -z-10 hidden sm:block"
         />
 
-        <div className="relative mx-auto max-w-4xl text-center bg-blue-900/95 rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
-          
+        <div className="relative mx-auto max-w-4xl text-center bg-[#0546C7] rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
           {/* Crest + Title */}
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-center">
             <div className="rounded-3xl p-2 sm:p-3">
@@ -303,7 +302,7 @@ const HomePage = () => {
                           <span className="text-xs text-gray-400">{post.type}</span>
                           <Link
                             to={`/post/${post._id}`}
-                            className="text-blue-700 font-semibold hover:underline"
+                            className="text-[#0546C7] font-semibold hover:underline"
                           >
                             Read more →
                           </Link>

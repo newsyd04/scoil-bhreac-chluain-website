@@ -154,13 +154,13 @@ const Footer = () => {
             <div className="mt-5 flex flex-col sm:flex-row sm:flex-wrap gap-3">
               <a
                 href="/admissions/Admission-Application-Form.pdf"
-                className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold bg-blue-600 text-white hover:bg-blue-700 shadow-sm"
+                className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold bg-[#0546C7] text-white hover:bg-blue-700 shadow-sm"
               >
                 Download Application
               </a>
               <a
                 href="/admissions/Annual-Admissions-Notice-2024-2025.pdf"
-                className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold border border-blue-100 text-blue-700 hover:bg-blue-50"
+                className="inline-flex justify-center rounded-full px-4 py-2 text-sm font-semibold border border-blue-100 text-[#0546C7] hover:bg-blue-50"
               >
                 Admissions Notice
               </a>
