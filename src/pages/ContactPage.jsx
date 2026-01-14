@@ -47,10 +47,10 @@ const ContactPage = () => {
               <h3 className="text-lg font-medium text-gray-800">Email</h3>
               <p>
                 <a
-                  href="mailto:scoilbhreacchluain@gmail.com"
+                  href="mailto:info@scoilbhreacchluain.ie"
                   className="text-blue-600 hover:underline"
                 >
-                  scoilbhreacchluain@gmail.com
+                  info@scoilbhreacchluain.ie
                 </a>
               </p>
             </div>

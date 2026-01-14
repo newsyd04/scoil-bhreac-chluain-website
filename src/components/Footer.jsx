@@ -35,12 +35,12 @@ const Footer = () => {
             <ul className="mt-4 space-y-2">
               <li>
                 <a
-                  href="mailto:scoilbhreacchluain@gmail.com"
+                  href="mailto:info@scoilbhreacchluain.ie"
                   className="inline-flex items-center gap-2 text-sm text-gray-700 hover:text-blue-700"
                   aria-label="Email Scoil Bhreac Chluain"
                 >
                   <i className="fa-regular fa-envelope" aria-hidden="true" />
-                  <span> s​coilbhreacchluain@gmail.com</span>
+                  <span>info@scoilbhreacchluain.ie</span>
                 </a>
               </li>
               <li>
