@@ -215,7 +215,7 @@ const HomePage = () => {
           className="absolute top-0 left-0 w-full h-full md:h-[120%] object-cover saturate-[0.86] -z-10 hidden sm:block"
         />
 
-        <div className="relative mx-auto max-w-4xl text-center bg-[#0546C7] rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
+        <div className="relative mx-auto max-w-4xl text-center bg-[#1C2E5A] rounded-xl py-8 sm:py-12 md:py-16 px-5 sm:px-10 shadow-xl flex flex-col items-center gap-6 sm:gap-8">
           {/* Crest + Title */}
           <div className="flex flex-col sm:flex-row gap-6 sm:gap-8 items-center sm:items-center">
             <div className="rounded-3xl p-2 sm:p-3">
@@ -333,7 +333,7 @@ const HomePage = () => {
       </section>
 
       {/* ================= CTA ================= */}
-      <section className="relative py-14 md:py-16 bg-sbc-blue text-white overflow-hidden">
+      <section className="relative py-14 md:py-16 bg-[#1C2E5A] text-white overflow-hidden">
         <div className="absolute inset-0 -z-0">
           {shapes.map((shape) => (
             <span
