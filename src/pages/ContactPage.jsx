@@ -6,6 +6,7 @@ const ContactPage = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
+  
   return (
     <div className="min-h-screen bg-[#F9F8F4] flex flex-col items-center justify-center p-6">
       {/* Contact Section */}
