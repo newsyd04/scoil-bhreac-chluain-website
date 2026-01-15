@@ -377,8 +377,8 @@ const AboutPage = () => {
 
   return (
     <div className="relative min-h-screen bg-[#F9F8F4] w-full overflow-hidden">
-      <div className="min-h-screen px-4 flex flex-col items-center z-10 relative shadow-2xl shadow-black/30">
-        <section className="w-full max-w-6xl p-8 bg-[#F9F8F4] rounded-2xl shadow-lg my-12">
+      <div className="min-h-screen px-4 flex flex-col items-center z-10 relative">
+        <section className="w-full max-w-6xl p-8 bg-[#F9F8F4] rounded-2xl my-12">
           <header className="text-center mb-8">
             <div className="flex items-center justify-center mb-4">
               <img src={crest} className="h-36 sm:h-40" alt="Scoil Bhreac Chluain crest" />
