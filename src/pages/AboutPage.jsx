@@ -386,7 +386,7 @@ const AboutPage = () => {
 
             <h2 className="text-4xl font-extrabold text-gray-900 mb-2">About Scoil Bhreac Chluain</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
-              A quick snapshot of our school — who we are, what we value, and the work we’re proud of.
+              A quick snapshot of our school - who we are, what we value, and the work we’re proud of.
             </p>
           </header>
 
