@@ -13,7 +13,7 @@ const ContactPage = () => {
         <section className="w-full max-w-6xl p-8 bg-[#F9F8F4] rounded-2xl my-12">
           {/* Title */}
           <header className="text-center mb-8">
-            <div className="backdrop-blur-md inline-block rounded-3xl p-3">
+            <div className="backdrop-blur-md flex items-center justify-center mb-4">
               <img
                 src={crest}
                 className="h-36 sm:h-40"
