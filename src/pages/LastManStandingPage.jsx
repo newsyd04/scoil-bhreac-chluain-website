@@ -160,20 +160,41 @@ const LastManStanding = () => {
           </p>
 
           <div className="mt-6 grid grid-cols-1 sm:grid-cols-3 gap-4">
-            <div className="bg-white rounded-lg shadow p-5">
+            {/* Entry Fee */}
+            <div className="relative overflow-hidden bg-white rounded-lg shadow p-5">
+              <span
+                className="absolute left-0 top-0 h-1.5 w-full opacity-90"
+                style={{ backgroundColor: "#F5AB00" }}
+                aria-hidden="true"
+              />
               <p className="text-sm text-gray-500">Entry Fee</p>
               <p className="text-2xl font-bold text-gray-900">€10</p>
             </div>
-            <div className="bg-white rounded-lg shadow p-5">
+
+            {/* Prize Pot */}
+            <div className="relative overflow-hidden bg-white rounded-lg shadow p-5">
+              <span
+                className="absolute left-0 top-0 h-1.5 w-full opacity-90"
+                style={{ backgroundColor: "#E45C7A" }}
+                aria-hidden="true"
+              />
               <p className="text-sm text-gray-500">Prize Pot</p>
               <p className="text-2xl font-bold text-gray-900">€500</p>
               <p className="text-xs text-gray-500 mt-1">MUST BE WON</p>
             </div>
-            <div className="bg-white rounded-lg shadow p-5">
+
+            {/* Selections Due */}
+            <div className="relative overflow-hidden bg-white rounded-lg shadow p-5">
+              <span
+                className="absolute left-0 top-0 h-1.5 w-full opacity-90"
+                style={{ backgroundColor: "#6AA84F" }}
+                aria-hidden="true"
+              />
               <p className="text-sm text-gray-500">Selections Due</p>
               <p className="text-2xl font-bold text-gray-900">Jan 22nd 2026</p>
             </div>
           </div>
+
 
           <div className="mt-6 flex flex-wrap gap-3">
             <a

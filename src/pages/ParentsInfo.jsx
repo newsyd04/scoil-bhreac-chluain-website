@@ -121,6 +121,7 @@ const ParentsInfo = () => {
   return (
     <main className="bg-[#F9F8F4] text-gray-900">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16">
+
         <header className="mb-8">
           <h1 className="text-3xl md:text-4xl font-extrabold tracking-tight">
             Parents’ Information
@@ -203,7 +204,12 @@ const ParentsInfo = () => {
 
           {/* Content */}
           <article className="lg:col-span-9">
-            <div className="rounded-2xl border bg-white border-gray-200 shadow-sm p-5 sm:p-7 lg:p-8">
+            <div className="relative rounded-2xl border bg-white border-gray-200 shadow-sm p-5 sm:p-7 lg:p-8">
+              <span
+                className="absolute left-0 top-0 h-1.5 w-full opacity-90"
+                style={{ backgroundColor: "#F5AB00" }}
+                aria-hidden="true"
+              />
               {sections.map((s) => (
                 <section key={s.id} className="mb-8 last:mb-0">
                   <a id={s.id} className="block -mt-24 pt-24" />
