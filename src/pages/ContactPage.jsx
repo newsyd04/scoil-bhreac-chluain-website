@@ -16,11 +16,11 @@ const ContactPage = () => {
             <div className="backdrop-blur-md flex items-center justify-center mb-4">
               <img
                 src={crest}
-                className="h-36 sm:h-40"
+                className="h-48"
                 alt="Scoil Bhreac Chluain crest"
               />
             </div>
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-2">
+            <h2 className="text-4xl font-extrabold text-[#1C2E5A] mb-2">
               Contact Us
             </h2>
             <p className="text-gray-500 text-lg">

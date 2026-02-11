@@ -119,7 +119,7 @@ const ParentsInfo = () => {
     }, []);
 
   return (
-    <main className="bg-[#F9F8F4] text-gray-900">
+    <main className="bg-[#F9F8F4] text-[#1C2E5A]">
       <section className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 pt-10 pb-16">
 
         <header className="mb-8">

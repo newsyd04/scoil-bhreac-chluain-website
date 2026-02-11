@@ -151,7 +151,7 @@ const LastManStanding = () => {
     <div className="min-h-screen bg-[#F9F8F4] py-12 px-4">
       <div className="max-w-5xl mx-auto">
         <header className="mb-10">
-          <h1 className="text-4xl font-extrabold text-gray-900 mb-3">
+          <h1 className="text-4xl font-extrabold text-[#1C2E5A] mb-3">
             National League Last Man Standing 2026
           </h1>
           <p className="text-lg text-gray-700">

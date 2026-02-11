@@ -381,10 +381,10 @@ const AboutPage = () => {
         <section className="w-full max-w-6xl p-8 bg-[#F9F8F4] rounded-2xl my-12">
           <header className="text-center mb-8">
             <div className="flex items-center justify-center mb-4">
-              <img src={crest} className="h-36 sm:h-40" alt="Scoil Bhreac Chluain crest" />
+              <img src={crest} className="h-48" alt="Scoil Bhreac Chluain crest" />
             </div>
 
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-2">About Scoil Bhreac Chluain</h2>
+            <h2 className="text-4xl font-extrabold text-[#1C2E5A] mb-2">About Scoil Bhreac Chluain</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               A quick snapshot of our school - who we are, what we value, and the work we’re proud of.
             </p>
@@ -409,7 +409,7 @@ const AboutPage = () => {
           </div>
 
           <header className="text-center mb-8">
-            <h2 className="text-2xl font-extrabold text-gray-900 mb-2">Meet Our Staff</h2>
+            <h2 className="text-2xl font-extrabold text-[#1C2E5A] mb-2">Meet Our Staff</h2>
             <p className="text-gray-500 text-lg">
               Dedicated professionals who bring passion and excellence to their roles every day.
             </p>
@@ -431,7 +431,7 @@ const AboutPage = () => {
           </div>
 
           <div className="mb-12">
-            <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Specialized Teams</h3>
+            <h3 className="text-2xl font-extrabold text-[#1C2E5A] text-center mb-6">Specialized Teams</h3>
             <div className="space-y-8">
               {groupMembers.map((group, index) => (
                 <div
@@ -449,7 +449,7 @@ const AboutPage = () => {
           </div>
 
           <div>
-            <h3 className="text-2xl font-extrabold text-gray-900 text-center mb-6">Board of Management Members</h3>
+            <h3 className="text-2xl font-extrabold text-[#1C2E5A] text-center mb-6">Board of Management Members</h3>
             <div className="space-y-8">
               <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-3 lg:grid-cols-4 gap-8 mb-12">
                 {BOMMembers.map((staff, index) => (

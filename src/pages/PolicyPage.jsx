@@ -72,10 +72,10 @@ const PolicyPage = () => {
           {/* Header (matches your About/Admissions style) */}
           <header className="text-center mb-8">
             <div className="flex items-center justify-center mb-4">
-              <img src={crest} className="h-36 sm:h-40" alt="Scoil Bhreac Chluain crest" />
+              <img src={crest} className="h-48" alt="Scoil Bhreac Chluain crest" />
             </div>
 
-            <h2 className="text-4xl font-extrabold text-gray-900 mb-2">School Policies</h2>
+            <h2 className="text-4xl font-extrabold text-[#1C2E5A] mb-2">School Policies</h2>
             <p className="text-gray-600 text-lg max-w-3xl mx-auto">
               Download and view key school policies below.
             </p>
