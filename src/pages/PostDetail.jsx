@@ -4,6 +4,16 @@ import { Download } from "lucide-react";
 
 const baseUrl = "https://webdev-backends.onrender.com";
 
+const getDownloadUrl = (fileUrl) => {
+  if (!fileUrl) return "";
+  if (!fileUrl.startsWith("http")) return `${baseUrl}/school/uploads/${fileUrl}`;
+  // Upgrade insecure stored links from old posts.
+  if (fileUrl.startsWith("http://webdev-backends.onrender.com")) {
+    return fileUrl.replace("http://", "https://");
+  }
+  return fileUrl;
+};
+
 const PostDetail = () => {
   const { id } = useParams();
   const [post, setPost] = useState(null);
@@ -56,11 +66,7 @@ const PostDetail = () => {
           <div className="flex items-center gap-3 bg-blue-50 border border-blue-200 p-4 rounded-lg mb-6">
             <Download className="w-5 h-5 text-blue-600" />
             <a
-              href={
-                post.fileUrl.startsWith("http")
-                  ? post.fileUrl
-                  : `${baseUrl}/school/uploads/${post.fileUrl}`
-              }
+              href={getDownloadUrl(post.fileUrl)}
               target="_blank"
               rel="noopener noreferrer"
               className="text-blue-700 font-medium hover:underline"
